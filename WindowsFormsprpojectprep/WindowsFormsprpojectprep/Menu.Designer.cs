@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adhérentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clubsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evenementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.listerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.listerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichierToolStripMenuItem,
-            this.adhérentsToolStripMenuItem});
+            this.adhérentsToolStripMenuItem,
+            this.clubsToolStripMenuItem,
+            this.evenementsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(511, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fichierToolStripMenuItem
-            // 
-            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // adhérentsToolStripMenuItem
             // 
@@ -68,23 +70,79 @@
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // listerToolStripMenuItem
             // 
             this.listerToolStripMenuItem.Name = "listerToolStripMenuItem";
-            this.listerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.listerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listerToolStripMenuItem.Text = "Lister";
             this.listerToolStripMenuItem.Click += new System.EventHandler(this.listerToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
+            // 
+            // clubsToolStripMenuItem
+            // 
+            this.clubsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem1,
+            this.listerToolStripMenuItem1,
+            this.supprimerToolStripMenuItem1});
+            this.clubsToolStripMenuItem.Name = "clubsToolStripMenuItem";
+            this.clubsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.clubsToolStripMenuItem.Text = "Clubs";
+            // 
+            // evenementsToolStripMenuItem
+            // 
+            this.evenementsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem2,
+            this.listerToolStripMenuItem2,
+            this.supprimerToolStripMenuItem2});
+            this.evenementsToolStripMenuItem.Name = "evenementsToolStripMenuItem";
+            this.evenementsToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.evenementsToolStripMenuItem.Text = "Evenements";
+            // 
+            // ajouterToolStripMenuItem1
+            // 
+            this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajouterToolStripMenuItem1.Text = "Ajouter";
+            // 
+            // listerToolStripMenuItem1
+            // 
+            this.listerToolStripMenuItem1.Name = "listerToolStripMenuItem1";
+            this.listerToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listerToolStripMenuItem1.Text = "Lister";
+            // 
+            // supprimerToolStripMenuItem1
+            // 
+            this.supprimerToolStripMenuItem1.Name = "supprimerToolStripMenuItem1";
+            this.supprimerToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.supprimerToolStripMenuItem1.Text = "Supprimer";
+            // 
+            // ajouterToolStripMenuItem2
+            // 
+            this.ajouterToolStripMenuItem2.Name = "ajouterToolStripMenuItem2";
+            this.ajouterToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.ajouterToolStripMenuItem2.Text = "Ajouter";
+            // 
+            // listerToolStripMenuItem2
+            // 
+            this.listerToolStripMenuItem2.Name = "listerToolStripMenuItem2";
+            this.listerToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.listerToolStripMenuItem2.Text = "Lister";
+            // 
+            // supprimerToolStripMenuItem2
+            // 
+            this.supprimerToolStripMenuItem2.Name = "supprimerToolStripMenuItem2";
+            this.supprimerToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.supprimerToolStripMenuItem2.Text = "Supprimer";
             // 
             // MaisonDesLigues
             // 
@@ -113,11 +171,18 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adhérentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clubsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem listerToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem evenementsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem listerToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem2;
     }
 }
 

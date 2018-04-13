@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsprpojectprep", "WindowsFormsprpojectprep\WindowsFormsprpojectprep.csproj", "{450A3575-9691-49A3-9A31-B8AD0AB5EDD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appli_M2L", "WindowsFormsprpojectprep\Appli_M2L.csproj", "{450A3575-9691-49A3-9A31-B8AD0AB5EDD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4BB5A04-F54C-4549-BAAD-234EA8E9CABC}
 	EndGlobalSection
 EndGlobal

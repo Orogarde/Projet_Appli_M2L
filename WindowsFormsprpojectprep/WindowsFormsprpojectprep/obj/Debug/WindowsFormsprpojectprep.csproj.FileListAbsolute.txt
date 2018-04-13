@@ -23,3 +23,16 @@ C:\Users\FREDERIC\Documents\Visual Studio 2017\Projects\WindowsFormsprpojectprep
 C:\Users\FREDERIC\Documents\Visual Studio 2017\Projects\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.csproj.CoreCompileInputs.cache
 C:\Users\FREDERIC\Documents\Visual Studio 2017\Projects\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.exe
 C:\Users\FREDERIC\Documents\Visual Studio 2017\Projects\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.pdb
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\bin\Debug\WindowsFormsprpojectprep.exe.config
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\bin\Debug\WindowsFormsprpojectprep.exe
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\bin\Debug\WindowsFormsprpojectprep.pdb
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.csprojResolveAssemblyReference.cache
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.Ajouter.resources
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.MaisonDesLigues.resources
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.ListeAdherent.resources
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.Properties.Resources.resources
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.Supprimer.resources
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.csproj.GenerateResource.cache
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.csproj.CoreCompileInputs.cache
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.exe
+C:\Users\FREDERIC\Source\Repos\M2L\Projet_Appli_M2L\WindowsFormsprpojectprep\WindowsFormsprpojectprep\obj\Debug\WindowsFormsprpojectprep.pdb

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsprpojectprep
 {
-    partial class formL
+    partial class ListeAdherent
     {
         /// <summary>
         /// Required designer variable.

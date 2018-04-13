@@ -8,16 +8,21 @@ namespace WindowsFormsprpojectprep
 {
     public class AdherentManagement
     {
+       
         private List<adhérent> listM { get; set; }
 
         public AdherentManagement()
         {
-            listM = Creationadd.creationliste();
+            listM = CreationListeadherent.creationliste();
         }
 
         public void AjouterAdherent(adhérent adherent)
         {
+            DBconnect connect = new DBconnect();
+
+           
             listM.Add(adherent);
+
         }
 
         public List<adhérent> Getadherent()

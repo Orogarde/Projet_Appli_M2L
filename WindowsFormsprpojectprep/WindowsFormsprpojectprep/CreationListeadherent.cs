@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsprpojectprep
 {
-    class Creationadd
+    class CreationListeadherent
     {
-        public Creationadd()
+        public CreationListeadherent()
         {
 
         }
 
         public static List<adhérent> creationliste()
         {
+
             List<adhérent> listcréer = new List<adhérent>();
-            listcréer.Add(new adhérent("dieu", "koukou",DateTime.Now));
-            listcréer.Add(new adhérent("swag", "ouai",DateTime.Now));
+               DBconnect connect = new DBconnect();
+
+            listcréer = connect.Readadherent();
+
+            listcréer.Add(new adhérent("dieu", "koukou","jojol","1","32",55,"FCOM",DateTime.Now));
+            
             return listcréer;
         }
     }

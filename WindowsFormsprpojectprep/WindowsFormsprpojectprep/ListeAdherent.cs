@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class formL : Form
+    public partial class ListeAdherent : Form
     {
         public AdherentManagement adherent;
 
-        public formL(AdherentManagement adherent)
+        public ListeAdherent(AdherentManagement adherent)
 
         {
             InitializeComponent();

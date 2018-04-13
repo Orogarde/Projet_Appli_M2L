@@ -32,7 +32,7 @@ namespace WindowsFormsprpojectprep
 
         private void listerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formL formL = new formL(listA);
+            ListeAdherent formL = new ListeAdherent(listA);
             formL.ShowDialog();
         }
 
