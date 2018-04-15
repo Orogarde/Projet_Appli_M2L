@@ -21,7 +21,7 @@ namespace WindowsFormsprpojectprep
 
             listcréer = connect.Readadherent();
 
-            listcréer.Add(new adhérent("dieu", "koukou","jojol","1","32",55,"FCOM",DateTime.Now));
+
             
             return listcréer;
         }

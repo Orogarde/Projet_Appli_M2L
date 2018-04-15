@@ -13,6 +13,7 @@ namespace WindowsFormsprpojectprep
     public partial class ListeAdherent : Form
     {
         public AdherentManagement adherent;
+        DBconnect connect = new DBconnect();
 
         public ListeAdherent(AdherentManagement adherent)
 
@@ -30,6 +31,7 @@ namespace WindowsFormsprpojectprep
 
                 dataGridView1.AutoGenerateColumns = true;
                 dataGridView1.AutoResizeColumns();
+                adherent.listM = connect.Readadherent();
                 dataGridView1.DataSource = adherent.Getadherent();
                 
 

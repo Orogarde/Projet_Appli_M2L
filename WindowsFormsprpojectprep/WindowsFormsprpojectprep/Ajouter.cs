@@ -23,24 +23,29 @@ namespace WindowsFormsprpojectprep
         
         private void buttonAjout_Click(object sender, EventArgs e)
         {
-            
+
+            //string nom = textBoxN.Text;
             string nom = textBoxN.Text;
             string prenom = textBoxP.Text;
-            string ville = textBoxVille.Text;
-            string numero = textBoxNumero.Text;
+            string ville = textBoxVille.Text; 
+            double cotisation = Convert.ToDouble(textBoxCotisation.Text);
+            string numero = textBoxN.Text.ToUpper() + textBoxCotisation.Text + textBoxP.Text.ToUpper();
             string codepostal = textBoxCodepostal.Text;
-            double cotisation = Convert.ToDouble( textBoxCotisation.Text);
+           
             string adresse = textBoxAdresse.Text;
+
             DateTime date = monthCalendar1.SelectionStart;
-            adhérent adherent = new adhérent(nom, prenom,ville,numero,codepostal,cotisation,adresse,date);
-            listAd.AjouterAdherent(adherent);
+            
+            adhérent adherent = new adhérent(nom, prenom,ville,numero,codepostal,cotisation,adresse);
+          //  listAd.AjouterAdherent(adherent);
+            adherent.date = date;
             DBconnect connect = new DBconnect();
             connect.ajouterAdherent(adherent);
             textBoxN.Text = string.Empty;
             textBoxP.Text = string.Empty;
             textBoxCotisation.Text = string.Empty;
             textBoxCodepostal.Text = string.Empty;
-            textBoxNumero.Text = string.Empty;
+            
             textBoxVille.Text = string.Empty;
             textBoxAdresse.Text = string.Empty;
 
@@ -61,5 +66,7 @@ namespace WindowsFormsprpojectprep
         {
             label6.Text = monthCalendar1.SelectionStart.ToShortDateString();
         }
+
+        
     }
 }

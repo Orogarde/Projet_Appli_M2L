@@ -35,12 +35,10 @@
             this.textBoxP = new System.Windows.Forms.TextBox();
             this.buttonvoir = new System.Windows.Forms.Button();
             this.textBoxVille = new System.Windows.Forms.TextBox();
-            this.textBoxNumero = new System.Windows.Forms.TextBox();
             this.textBoxCodepostal = new System.Windows.Forms.TextBox();
             this.textBoxAdresse = new System.Windows.Forms.TextBox();
             this.textBoxCotisation = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -117,14 +115,6 @@
             this.textBoxVille.Size = new System.Drawing.Size(100, 20);
             this.textBoxVille.TabIndex = 6;
             // 
-            // textBoxNumero
-            // 
-            this.textBoxNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNumero.Location = new System.Drawing.Point(97, 116);
-            this.textBoxNumero.Name = "textBoxNumero";
-            this.textBoxNumero.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNumero.TabIndex = 7;
-            // 
             // textBoxCodepostal
             // 
             this.textBoxCodepostal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -157,15 +147,6 @@
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "VILLE";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "NUMERO";
             // 
             // label3
             // 
@@ -232,12 +213,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxCotisation);
             this.Controls.Add(this.textBoxAdresse);
             this.Controls.Add(this.textBoxCodepostal);
-            this.Controls.Add(this.textBoxNumero);
             this.Controls.Add(this.textBoxVille);
             this.Controls.Add(this.buttonvoir);
             this.Controls.Add(this.textBoxP);
@@ -263,12 +242,10 @@
         private System.Windows.Forms.TextBox textBoxP;
         private System.Windows.Forms.Button buttonvoir;
         private System.Windows.Forms.TextBox textBoxVille;
-        private System.Windows.Forms.TextBox textBoxNumero;
         private System.Windows.Forms.TextBox textBoxCodepostal;
         private System.Windows.Forms.TextBox textBoxAdresse;
         private System.Windows.Forms.TextBox textBoxCotisation;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

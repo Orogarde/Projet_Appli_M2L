@@ -58,8 +58,8 @@ namespace WindowsFormsprpojectprep
                         adhérents = new adhérent((string)datareader["Nom_adherent"],
                             (string)datareader["Prenom_adherent"], (string)datareader["Ville_adherent"],
                             (string)datareader["numero_licence"], (string)datareader["Code_Postal_adherent"],
-                            Convert.ToDouble(datareader["cotisation_adherent"]), (string)datareader["Adresse_adherent"],
-                            (DateTime)datareader["Date_naissance_adherent"]);
+                            Convert.ToDouble(datareader["cotisation_adherent"]), (string)datareader["Adresse_adherent"]);
+                            
 
                         adhérents.id = (int)datareader["id_adherent"];
                         liste.Add(adhérents);
@@ -71,17 +71,27 @@ namespace WindowsFormsprpojectprep
             return liste;
         }
 
-
-        public void ajouterAdherent(adhérent adhérents)
+        public void supprimerAdherent(adhérent adhérents)
         {
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
             {
                 connexion.Open();
-                string requete = "INSERT INTO `adherent` (`id_adherent`, `numero_licence`, `Nom_adherent`, `Prenom_adherent`, `Date_naissance_adherent`, `Adresse_adherent`, `Code_Postal_adherent`, `Ville_adherent`, `cotisation_adherent`, `id_club`) VALUES (NULL, '@numero', '@nom', '@prenom', '@date', '@adresse', '@codepostal', '@ville', '@cotisation', NULL);";
+                string requete = "DELETE FROM adherent WHERE id_adherent = @id";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", adhérents.id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void ajouterAdherent(adhérent adhérents)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            { 
+                connexion.Open();
+                string requete = "INSERT INTO `adherent` (`id_adherent`, `numero_licence`, `Nom_adherent`, `Prenom_adherent`, `Date_naissance_adherent`, `Adresse_adherent`, `Code_Postal_adherent`, `Ville_adherent`, `cotisation_adherent`, `id_club`) VALUES (NULL, @numero, @nom, @prenom, @date, @adresse, @codepostal, @ville, @cotisation, NULL);";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@nom", adhérents.nom);
                 cmd.Parameters.AddWithValue("@prenom", adhérents.prenom);
-                cmd.Parameters.Add("@date", MySqlDbType.DateTime).Value = adhérents.date;
+                cmd.Parameters.AddWithValue("@date",adhérents.date);
                 cmd.Parameters.AddWithValue("@adresse", adhérents.Adresse);
                 cmd.Parameters.AddWithValue("@codepostal", adhérents.codepostal);
                 cmd.Parameters.AddWithValue("@ville", adhérents.ville);

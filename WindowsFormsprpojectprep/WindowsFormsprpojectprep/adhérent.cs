@@ -17,7 +17,7 @@ namespace WindowsFormsprpojectprep
         public double cotisation { get; set; }
         public DateTime date { get; set; }
         public string Adresse { get; set; }
-        public adhérent(string nom, string prenom,string ville,string numero,string codepostal,double cotisation,string Adresse, DateTime date)
+        public adhérent(string nom, string prenom,string ville,string numero,string codepostal,double cotisation,string Adresse)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -26,7 +26,7 @@ namespace WindowsFormsprpojectprep
             this.codepostal = codepostal;
             this.cotisation = cotisation;
             this.Adresse = Adresse;
-            this.date = date;
+            
         }
 
         public string Affichage()

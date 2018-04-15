@@ -9,7 +9,7 @@ namespace WindowsFormsprpojectprep
     public class AdherentManagement
     {
        
-        private List<adhérent> listM { get; set; }
+        public List<adhérent> listM { get; set; }
 
         public AdherentManagement()
         {
@@ -23,6 +23,11 @@ namespace WindowsFormsprpojectprep
            
             listM.Add(adherent);
 
+        }
+
+        public adhérent GetAdhérentliste(int i)
+        {
+            return listM[i];
         }
 
         public List<adhérent> Getadherent()
