@@ -16,8 +16,8 @@ namespace WindowsFormsprpojectprep
         
       //  public List<adhérent> liste = new List<adhérent>();
         public AdherentManagement adherent;
-        
-      DBconnect connect = new DBconnect();
+       
+      DAOadherent connect = new DAOadherent();
 
 
         public int index;

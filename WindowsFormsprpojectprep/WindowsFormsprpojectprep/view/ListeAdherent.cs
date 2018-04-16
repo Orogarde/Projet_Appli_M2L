@@ -13,7 +13,8 @@ namespace WindowsFormsprpojectprep
     public partial class ListeAdherent : Form
     {
         public AdherentManagement adherent;
-        DBconnect connect = new DBconnect();
+        
+        DAOadherent connect = new DAOadherent();
 
         public ListeAdherent(AdherentManagement adherent)
 

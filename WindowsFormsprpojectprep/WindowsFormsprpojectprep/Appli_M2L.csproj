@@ -57,43 +57,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdherentManagement.cs" />
-    <Compile Include="adhérent.cs" />
-    <Compile Include="Ajouter.cs">
+    <Compile Include="Classes métiers\AdherentManagement.cs" />
+    <Compile Include="Classes métiers\adhérent.cs" />
+    <Compile Include="Classes métiers\Club.cs" />
+    <Compile Include="Classes métiers\ClubManagement.cs" />
+    <Compile Include="Classes métiers\CreationListeClub.cs" />
+    <Compile Include="DAO\DAOclub.cs" />
+    <Compile Include="view\Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ajouter.Designer.cs">
+    <Compile Include="view\Ajouter.Designer.cs">
       <DependentUpon>Ajouter.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreationListeadherent.cs" />
-    <Compile Include="DBconnect.cs" />
-    <Compile Include="Menu.cs">
+    <Compile Include="Classes métiers\CreationListeadherent.cs" />
+    <Compile Include="DAO\DAOadherent.cs" />
+    <Compile Include="view\ListeClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="view\ListeClub.Designer.cs">
+      <DependentUpon>ListeClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListeAdherent.cs">
+    <Compile Include="view\ListeAdherent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeAdherent.Designer.cs">
+    <Compile Include="view\ListeAdherent.Designer.cs">
       <DependentUpon>ListeAdherent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Supprimer.cs">
+    <Compile Include="view\Supprimer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supprimer.Designer.cs">
+    <Compile Include="view\Supprimer.Designer.cs">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Ajouter.resx">
+    <EmbeddedResource Include="view\Ajouter.resx">
       <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="view\ListeClub.resx">
+      <DependentUpon>ListeClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeAdherent.resx">
+    <EmbeddedResource Include="view\ListeAdherent.resx">
       <DependentUpon>ListeAdherent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -106,7 +119,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Supprimer.resx">
+    <EmbeddedResource Include="view\Supprimer.resx">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

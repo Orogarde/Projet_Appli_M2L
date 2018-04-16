@@ -18,7 +18,7 @@ namespace WindowsFormsprpojectprep
 
         public void AjouterAdherent(adhérent adherent)
         {
-            DBconnect connect = new DBconnect();
+            
 
            
             listM.Add(adherent);

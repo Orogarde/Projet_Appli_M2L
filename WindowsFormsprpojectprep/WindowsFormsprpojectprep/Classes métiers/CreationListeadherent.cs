@@ -17,7 +17,7 @@ namespace WindowsFormsprpojectprep
         {
 
             List<adhérent> listcréer = new List<adhérent>();
-               DBconnect connect = new DBconnect();
+               DAOadherent connect = new DAOadherent();
 
             listcréer = connect.Readadherent();
 

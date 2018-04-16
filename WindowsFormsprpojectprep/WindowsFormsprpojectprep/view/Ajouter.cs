@@ -36,10 +36,10 @@ namespace WindowsFormsprpojectprep
 
             DateTime date = monthCalendar1.SelectionStart;
             
-            adhérent adherent = new adhérent(nom, prenom,ville,numero,codepostal,cotisation,adresse);
+            adhérent adherent = new adhérent(nom, prenom,ville,numero,codepostal,cotisation,date,adresse);
           //  listAd.AjouterAdherent(adherent);
             adherent.date = date;
-            DBconnect connect = new DBconnect();
+            DAOadherent connect = new DAOadherent();
             connect.ajouterAdherent(adherent);
             textBoxN.Text = string.Empty;
             textBoxP.Text = string.Empty;

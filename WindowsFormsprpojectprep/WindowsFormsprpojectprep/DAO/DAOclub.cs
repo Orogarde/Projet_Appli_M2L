@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsprpojectprep
 {
-    class DBconnect
+    class DAOclub
     {
         private string connectionString;
 
         //Constructor
-        public DBconnect()
+        public DAOclub()
         {
             Initialize();
         }
@@ -39,15 +39,15 @@ namespace WindowsFormsprpojectprep
         /// </summary>
         /// <param name="id">id du fournisseur recherché</param>
         /// <returns></returns>
-        public List<adhérent> Readadherent()
+        public List<Club> ReadClub ()
         {
-           List <adhérent>liste = new List<adhérent>();
-
-            adhérent adhérents;
+            List<Club>liste= new List<Club>();
+                
+            Club clubs;
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
             {
                 connexion.Open();
-                string requete = "SELECT id_adherent, Nom_adherent,numero_licence, Prenom_adherent, Date_naissance_adherent , Adresse_adherent, Code_Postal_adherent,Ville_adherent,cotisation_adherent FROM adherent;";
+                string requete = "SELECT * FROM club";
 
 
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
@@ -55,14 +55,14 @@ namespace WindowsFormsprpojectprep
                 {
                     while (datareader.Read())
                     {
-                        adhérents = new adhérent((string)datareader["Nom_adherent"],
-                            (string)datareader["Prenom_adherent"], (string)datareader["Ville_adherent"],
-                            (string)datareader["numero_licence"], (string)datareader["Code_Postal_adherent"],
-                            Convert.ToDouble(datareader["cotisation_adherent"]), (string)datareader["Adresse_adherent"]);
-                            
+                        clubs = new Club(
+                            (string)datareader["Titre_club"], (string)datareader["url_club"],
+                            (string)datareader["Ville_club"], (string)datareader["telephone_club"], (string)datareader["Code_Postal_club"],
+                            (string)datareader["mail_club"],  (int)datareader["id_type_club"], (string)datareader["Adresse_club"]);
 
-                        adhérents.id = (int)datareader["id_adherent"];
-                        liste.Add(adhérents);
+
+                        clubs.id = (int)datareader["id_club"];
+                        liste.Add(clubs);
 
                     }
 
@@ -85,13 +85,13 @@ namespace WindowsFormsprpojectprep
         public void ajouterAdherent(adhérent adhérents)
         {
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
-            { 
+            {
                 connexion.Open();
                 string requete = "INSERT INTO `adherent` (`id_adherent`, `numero_licence`, `Nom_adherent`, `Prenom_adherent`, `Date_naissance_adherent`, `Adresse_adherent`, `Code_Postal_adherent`, `Ville_adherent`, `cotisation_adherent`, `id_club`) VALUES (NULL, @numero, @nom, @prenom, @date, @adresse, @codepostal, @ville, @cotisation, NULL);";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@nom", adhérents.nom);
                 cmd.Parameters.AddWithValue("@prenom", adhérents.prenom);
-                cmd.Parameters.AddWithValue("@date",adhérents.date);
+                cmd.Parameters.AddWithValue("@date", adhérents.date);
                 cmd.Parameters.AddWithValue("@adresse", adhérents.Adresse);
                 cmd.Parameters.AddWithValue("@codepostal", adhérents.codepostal);
                 cmd.Parameters.AddWithValue("@ville", adhérents.ville);
@@ -102,8 +102,3 @@ namespace WindowsFormsprpojectprep
         }
     }
 }
-       
-
-
-
-

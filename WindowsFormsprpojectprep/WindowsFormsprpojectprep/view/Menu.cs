@@ -12,11 +12,13 @@ namespace WindowsFormsprpojectprep
 {
     public partial class MaisonDesLigues : Form
     {
+        ClubManagement listClub;
         AdherentManagement listA;
         public MaisonDesLigues()
         {
             InitializeComponent();
             listA = new AdherentManagement();
+            listClub = new ClubManagement();
         }
 
         private void adhérentsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,6 +42,12 @@ namespace WindowsFormsprpojectprep
         {
             Supprimer Supprimer = new Supprimer(listA);
             Supprimer.ShowDialog();
+        }
+
+        private void listerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ListeClub listeclubs = new ListeClub(listClub);
+            listeclubs.ShowDialog();
         }
     }
 }
