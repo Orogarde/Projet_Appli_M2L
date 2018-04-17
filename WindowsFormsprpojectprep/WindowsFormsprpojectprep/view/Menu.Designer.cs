@@ -106,6 +106,7 @@
             this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
             this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.ajouterToolStripMenuItem1.Text = "Ajouter";
+            this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
             // 
             // listerToolStripMenuItem1
             // 
@@ -119,6 +120,7 @@
             this.supprimerToolStripMenuItem1.Name = "supprimerToolStripMenuItem1";
             this.supprimerToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.supprimerToolStripMenuItem1.Text = "Supprimer";
+            this.supprimerToolStripMenuItem1.Click += new System.EventHandler(this.supprimerToolStripMenuItem1_Click);
             // 
             // evenementsToolStripMenuItem
             // 

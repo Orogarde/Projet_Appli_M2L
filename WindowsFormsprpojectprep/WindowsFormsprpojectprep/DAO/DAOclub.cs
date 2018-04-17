@@ -71,32 +71,32 @@ namespace WindowsFormsprpojectprep
             return liste;
         }
 
-        public void supprimerAdherent(adhérent adhérents)
+        public void supprimerClub(Club club)
         {
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
             {
                 connexion.Open();
-                string requete = "DELETE FROM adherent WHERE id_adherent = @id";
+                string requete = "DELETE FROM club WHERE id_club = @id";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
-                cmd.Parameters.AddWithValue("@id", adhérents.id);
+                cmd.Parameters.AddWithValue("@id", club.id);
                 cmd.ExecuteNonQuery();
             }
         }
-        public void ajouterAdherent(adhérent adhérents)
+        public void ajouterClub(Club club)
         {
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
             {
                 connexion.Open();
-                string requete = "INSERT INTO `adherent` (`id_adherent`, `numero_licence`, `Nom_adherent`, `Prenom_adherent`, `Date_naissance_adherent`, `Adresse_adherent`, `Code_Postal_adherent`, `Ville_adherent`, `cotisation_adherent`, `id_club`) VALUES (NULL, @numero, @nom, @prenom, @date, @adresse, @codepostal, @ville, @cotisation, NULL);";
+                string requete = "INSERT INTO `club` (`id_club`, `Titre_club`, `url_club`, `Adresse_club`, `Code_Postal_club`, `Ville_club`, `mail_club`, `telephone_club`, `id_type_club`) VALUES (NULL, @titre, @url, @adresse, @code, @ville, @mail, @telephone, @idtype)";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
-                cmd.Parameters.AddWithValue("@nom", adhérents.nom);
-                cmd.Parameters.AddWithValue("@prenom", adhérents.prenom);
-                cmd.Parameters.AddWithValue("@date", adhérents.date);
-                cmd.Parameters.AddWithValue("@adresse", adhérents.Adresse);
-                cmd.Parameters.AddWithValue("@codepostal", adhérents.codepostal);
-                cmd.Parameters.AddWithValue("@ville", adhérents.ville);
-                cmd.Parameters.AddWithValue("@numero", adhérents.numero);
-                cmd.Parameters.AddWithValue("@cotisation", adhérents.cotisation);
+                cmd.Parameters.AddWithValue("@titre", club.titre);
+                cmd.Parameters.AddWithValue("@url", club.url );
+                cmd.Parameters.AddWithValue("@adresse", club.Adresse);
+                cmd.Parameters.AddWithValue("@code", club.codepostal);
+                cmd.Parameters.AddWithValue("@ville", club.ville);
+                cmd.Parameters.AddWithValue("@mail", club.mail);
+                cmd.Parameters.AddWithValue("@telephone", club.numero);
+                cmd.Parameters.AddWithValue("@idtype", club.idType);
                 cmd.ExecuteNonQuery();
             }
         }

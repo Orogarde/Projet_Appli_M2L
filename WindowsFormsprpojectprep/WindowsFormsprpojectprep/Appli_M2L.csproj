@@ -63,6 +63,12 @@
     <Compile Include="Classes métiers\ClubManagement.cs" />
     <Compile Include="Classes métiers\CreationListeClub.cs" />
     <Compile Include="DAO\DAOclub.cs" />
+    <Compile Include="view\AjoutClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AjoutClub.Designer.cs">
+      <DependentUpon>AjoutClub.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,15 @@
     <Compile Include="view\Supprimer.Designer.cs">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\supprimerClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\supprimerClub.Designer.cs">
+      <DependentUpon>supprimerClub.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\AjoutClub.resx">
+      <DependentUpon>AjoutClub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Ajouter.resx">
       <DependentUpon>Ajouter.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="view\Supprimer.resx">
       <DependentUpon>Supprimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\supprimerClub.resx">
+      <DependentUpon>supprimerClub.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

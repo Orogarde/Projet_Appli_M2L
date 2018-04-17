@@ -49,5 +49,17 @@ namespace WindowsFormsprpojectprep
             ListeClub listeclubs = new ListeClub(listClub);
             listeclubs.ShowDialog();
         }
+
+        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AjoutClub ajoutC = new AjoutClub(listClub);
+            ajoutC.ShowDialog();
+        }
+
+        private void supprimerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            supprimerClub Supclub = new supprimerClub(listClub);
+            Supclub.ShowDialog();
+        }
     }
 }
