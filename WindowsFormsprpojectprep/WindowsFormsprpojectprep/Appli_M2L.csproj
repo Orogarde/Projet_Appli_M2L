@@ -62,7 +62,16 @@
     <Compile Include="Classes métiers\Club.cs" />
     <Compile Include="Classes métiers\ClubManagement.cs" />
     <Compile Include="Classes métiers\CreationListeClub.cs" />
+    <Compile Include="Classes métiers\CreationListeTypeClub.cs" />
+    <Compile Include="Classes métiers\TypeClub.cs" />
+    <Compile Include="Classes métiers\TypeClubManagement.cs" />
     <Compile Include="DAO\DAOclub.cs" />
+    <Compile Include="view\AjoutAdherentAclub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AjoutAdherentAclub.Designer.cs">
+      <DependentUpon>AjoutAdherentAclub.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\AjoutClub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +118,9 @@
     <Compile Include="view\supprimerClub.Designer.cs">
       <DependentUpon>supprimerClub.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\AjoutAdherentAclub.resx">
+      <DependentUpon>AjoutAdherentAclub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\AjoutClub.resx">
       <DependentUpon>AjoutClub.cs</DependentUpon>
     </EmbeddedResource>

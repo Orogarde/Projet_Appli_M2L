@@ -35,16 +35,15 @@
             this.textBoxAdresse = new System.Windows.Forms.TextBox();
             this.textBoxUrl = new System.Windows.Forms.TextBox();
             this.textBoxTel = new System.Windows.Forms.TextBox();
-            this.textBoxIdType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonAjout = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // textBoxtitre
@@ -96,13 +95,6 @@
             this.textBoxTel.Size = new System.Drawing.Size(100, 20);
             this.textBoxTel.TabIndex = 6;
             // 
-            // textBoxIdType
-            // 
-            this.textBoxIdType.Location = new System.Drawing.Point(198, 230);
-            this.textBoxIdType.Name = "textBoxIdType";
-            this.textBoxIdType.Size = new System.Drawing.Size(100, 20);
-            this.textBoxIdType.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -130,16 +122,6 @@
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Adresse";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 237);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Type club ( int )";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -179,7 +161,7 @@
             // 
             // buttonAjout
             // 
-            this.buttonAjout.Location = new System.Drawing.Point(389, 133);
+            this.buttonAjout.Location = new System.Drawing.Point(398, 227);
             this.buttonAjout.Name = "buttonAjout";
             this.buttonAjout.Size = new System.Drawing.Size(75, 23);
             this.buttonAjout.TabIndex = 17;
@@ -187,21 +169,29 @@
             this.buttonAjout.UseVisualStyleBackColor = true;
             this.buttonAjout.Click += new System.EventHandler(this.buttonAjout_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(363, 48);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 160);
+            this.listBox1.TabIndex = 18;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // AjoutClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 318);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonAjout);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxIdType);
             this.Controls.Add(this.textBoxTel);
             this.Controls.Add(this.textBoxUrl);
             this.Controls.Add(this.textBoxAdresse);
@@ -211,6 +201,7 @@
             this.Controls.Add(this.textBoxtitre);
             this.Name = "AjoutClub";
             this.Text = "AjoutClub";
+            this.Load += new System.EventHandler(this.AjoutClub_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,15 +216,14 @@
         private System.Windows.Forms.TextBox textBoxAdresse;
         private System.Windows.Forms.TextBox textBoxUrl;
         private System.Windows.Forms.TextBox textBoxTel;
-        private System.Windows.Forms.TextBox textBoxIdType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonAjout;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

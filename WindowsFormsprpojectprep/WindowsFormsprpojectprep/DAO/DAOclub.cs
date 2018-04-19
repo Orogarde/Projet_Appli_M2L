@@ -96,9 +96,37 @@ namespace WindowsFormsprpojectprep
                 cmd.Parameters.AddWithValue("@ville", club.ville);
                 cmd.Parameters.AddWithValue("@mail", club.mail);
                 cmd.Parameters.AddWithValue("@telephone", club.numero);
-                cmd.Parameters.AddWithValue("@idtype", club.idType);
+                cmd.Parameters.AddWithValue("@idtype", club.Type.id);
                 cmd.ExecuteNonQuery();
             }
+        }
+        public List<TypeClub> ReadType()
+        {
+            List<TypeClub> liste = new List<TypeClub>();
+
+            TypeClub type;
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+                connexion.Open();
+                string requete = "SELECT * FROM type_club";
+
+
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                using (MySqlDataReader datareader = cmd.ExecuteReader())
+                {
+                    while (datareader.Read())
+                    {
+                        type = new TypeClub(
+                            (string)datareader["libelle"]);
+
+                        type.id = (int)datareader["id_type_club"];
+                        liste.Add(type);
+
+                    }
+
+                }
+            }
+            return liste;
         }
     }
 }

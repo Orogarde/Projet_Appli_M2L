@@ -17,6 +17,8 @@ namespace WindowsFormsprpojectprep
         public double cotisation { get; set; }
         public DateTime date { get; set; }
         public string Adresse { get; set; }
+        public Club club { get; set; }
+
         public adhérent(string nom, string prenom,string ville,string numero,string codepostal,double cotisation,DateTime date, string Adresse)
         {
             this.nom = nom;
@@ -27,6 +29,7 @@ namespace WindowsFormsprpojectprep
             this.cotisation = cotisation;
             this.date = date;
             this.Adresse = Adresse;
+            
             
         }
 

@@ -14,11 +14,13 @@ namespace WindowsFormsprpojectprep
     {
         ClubManagement listClub;
         AdherentManagement listA;
+        TypeClubManagement listType;
         public MaisonDesLigues()
         {
             InitializeComponent();
             listA = new AdherentManagement();
             listClub = new ClubManagement();
+            listType = new TypeClubManagement();
         }
 
         private void adhérentsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace WindowsFormsprpojectprep
 
         private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AjoutClub ajoutC = new AjoutClub(listClub);
+            AjoutClub ajoutC = new AjoutClub(listClub,listType);
             ajoutC.ShowDialog();
         }
 
@@ -60,6 +62,12 @@ namespace WindowsFormsprpojectprep
         {
             supprimerClub Supclub = new supprimerClub(listClub);
             Supclub.ShowDialog();
+        }
+
+        private void ajouterUnAdhérentsÀUnClubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AjoutAdherentAclub AjoutAdherentAclub = new AjoutAdherentAclub(listA,listClub);
+            AjoutAdherentAclub.ShowDialog();
         }
     }
 }

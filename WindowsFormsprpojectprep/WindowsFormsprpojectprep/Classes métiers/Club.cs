@@ -16,6 +16,7 @@ namespace WindowsFormsprpojectprep
         public string mail { get; set; }
         public int idType { get; set; }
         public string Adresse { get; set; }
+        public TypeClub Type { get; set; }
 
 
         public Club(string titre, string url, string ville, string numero, string codepostal, string mail, int idType, string adresse)

@@ -82,6 +82,18 @@ namespace WindowsFormsprpojectprep
                 cmd.ExecuteNonQuery();
             }
         }
+        public void AjoutAdherentAclub(adhérent adhérents)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+                connexion.Open();
+                string requete = "UPDATE adherent SET id_club = @idclub WHERE adherent.id_adherent = @id;";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", adhérents.id);
+                cmd.Parameters.AddWithValue("@idclub", adhérents.club.id);
+                cmd.ExecuteNonQuery();
+            }
+        }
         public void ajouterAdherent(adhérent adhérents)
         {
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
