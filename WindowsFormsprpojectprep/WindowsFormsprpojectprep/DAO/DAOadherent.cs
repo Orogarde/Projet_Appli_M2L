@@ -44,10 +44,12 @@ namespace WindowsFormsprpojectprep
            List <adhérent>liste = new List<adhérent>();
 
             adhérent adhérents;
+            Club club;
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
             {
                 connexion.Open();
-                string requete = "SELECT id_adherent, Nom_adherent,numero_licence, Prenom_adherent, Date_naissance_adherent , Adresse_adherent, Code_Postal_adherent,Ville_adherent,cotisation_adherent FROM adherent;";
+                
+                string requete = "SELECT id_adherent, Nom_adherent,numero_licence, Prenom_adherent, Date_naissance_adherent , Adresse_adherent, Code_Postal_adherent,Ville_adherent,cotisation_adherent,club.id_club,Titre_club,url_club,Adresse_club,Code_Postal_club,Ville_club,mail_club,id_type_club,telephone_club FROM adherent INNER join club on adherent.id_club = club.id_club";
 
 
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
@@ -59,9 +61,52 @@ namespace WindowsFormsprpojectprep
                             (string)datareader["Prenom_adherent"], (string)datareader["Ville_adherent"],
                             (string)datareader["numero_licence"], (string)datareader["Code_Postal_adherent"],
                             Convert.ToDouble(datareader["cotisation_adherent"]),(DateTime)datareader["Date_naissance_adherent"], (string)datareader["Adresse_adherent"]);
-                            
+
+                        club = new Club(
+                           (string)datareader["Titre_club"], (string)datareader["url_club"],
+                           (string)datareader["Ville_club"], (string)datareader["telephone_club"], (string)datareader["Code_Postal_club"],
+                           (string)datareader["mail_club"], (int)datareader["id_type_club"], (string)datareader["Adresse_club"]);
+
+
+                        club.id = (int)datareader["id_club"];
 
                         adhérents.id = (int)datareader["id_adherent"];
+                        adhérents.club = club;
+                        liste.Add(adhérents);
+
+                    }
+
+                }
+            }
+            return liste;
+        }
+        public List<adhérent> ReadadherentSansClub()
+        {
+            List<adhérent> liste = new List<adhérent>();
+
+            adhérent adhérents;
+           
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+                connexion.Open();
+
+                string requete = "SELECT * FROM adherent where adherent.id_club is Null";
+
+
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                using (MySqlDataReader datareader = cmd.ExecuteReader())
+                {
+                    while (datareader.Read())
+                    {
+                        adhérents = new adhérent((string)datareader["Nom_adherent"],
+                            (string)datareader["Prenom_adherent"], (string)datareader["Ville_adherent"],
+                            (string)datareader["numero_licence"], (string)datareader["Code_Postal_adherent"],
+                            Convert.ToDouble(datareader["cotisation_adherent"]), (DateTime)datareader["Date_naissance_adherent"], (string)datareader["Adresse_adherent"]);
+
+
+
+                        adhérents.id = (int)datareader["id_adherent"];
+                        
                         liste.Add(adhérents);
 
                     }

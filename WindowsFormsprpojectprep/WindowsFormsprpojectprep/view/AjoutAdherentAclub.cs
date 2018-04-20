@@ -29,7 +29,8 @@ namespace WindowsFormsprpojectprep
 
         private void AjoutAdherentAclub_Load(object sender, EventArgs e)
         {
-            listAdherents.listM = connect.Readadherent();
+            listAdherents.listM = connect.ReadadherentSansClub();
+            
             foreach (var item in listAdherents.listM)
             {
                 listBoxAdherents.Items.Add(item.nom+"  "+item.prenom);
@@ -45,7 +46,7 @@ namespace WindowsFormsprpojectprep
         {
 
             indexAdherent = listBoxAdherents.SelectedIndex;
-            adherent = listAdherents.GetAdhérentliste(indexAdherent);
+            
            
         }
 
@@ -61,7 +62,15 @@ namespace WindowsFormsprpojectprep
             club = listClubs.GetClubliste(indexClub);
            adherent.club = club;
             connect.AjoutAdherentAclub(adherent);
-         
+
+            listBoxAdherents.Items.Clear();
+            listAdherents.listM = connect.ReadadherentSansClub();
+
+            foreach (var item in listAdherents.listM)
+            {
+                listBoxAdherents.Items.Add(item.nom + "  " + item.prenom);
+            }
+
         }
     }
 }

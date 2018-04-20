@@ -97,6 +97,7 @@ namespace WindowsFormsprpojectprep
                 cmd.Parameters.AddWithValue("@mail", club.mail);
                 cmd.Parameters.AddWithValue("@telephone", club.numero);
                 cmd.Parameters.AddWithValue("@idtype", club.Type.id);
+
                 cmd.ExecuteNonQuery();
             }
         }

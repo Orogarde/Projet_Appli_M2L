@@ -32,7 +32,8 @@ namespace WindowsFormsprpojectprep
 
                 dataGridView1.AutoGenerateColumns = true;
                 dataGridView1.AutoResizeColumns();
-                adherent.listM = connect.Readadherent();
+                adherent.listM = connect.ReadadherentSansClub();
+                adherent.listM.AddRange(connect.Readadherent());
                 dataGridView1.DataSource = adherent.Getadherent();
                 
 

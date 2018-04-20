@@ -29,7 +29,9 @@ namespace WindowsFormsprpojectprep
 
         private void Supprimer_Load(object sender, EventArgs e)
         {
-            adherent.listM = connect.Readadherent();
+            adherent.listM = connect.ReadadherentSansClub();
+            adherent.listM.AddRange(connect.Readadherent());
+
             foreach (var item in adherent.listM)
             {
                 listBoxSupprimer.Items.Add(item.nom + " " + item.prenom);
@@ -52,7 +54,8 @@ namespace WindowsFormsprpojectprep
             
             
             listBoxSupprimer.Items.Clear();
-            adherent.listM = connect.Readadherent();
+            adherent.listM = connect.ReadadherentSansClub();
+            adherent.listM.AddRange(connect.Readadherent());
             foreach (var item in adherent.listM)
             {
                 listBoxSupprimer.Items.Add(item.nom + " " + item.prenom);

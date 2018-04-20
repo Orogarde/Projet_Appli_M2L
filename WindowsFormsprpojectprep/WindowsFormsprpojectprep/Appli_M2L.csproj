@@ -63,6 +63,7 @@
     <Compile Include="Classes métiers\ClubManagement.cs" />
     <Compile Include="Classes métiers\CreationListeClub.cs" />
     <Compile Include="Classes métiers\CreationListeTypeClub.cs" />
+    <Compile Include="Classes métiers\Evenement.cs" />
     <Compile Include="Classes métiers\TypeClub.cs" />
     <Compile Include="Classes métiers\TypeClubManagement.cs" />
     <Compile Include="DAO\DAOclub.cs" />

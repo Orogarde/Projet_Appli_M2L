@@ -19,10 +19,13 @@ namespace WindowsFormsprpojectprep
             List<adhérent> listcréer = new List<adhérent>();
                DAOadherent connect = new DAOadherent();
 
-            listcréer = connect.Readadherent();
+           // listcréer = connect.Readadherent() ;
+           // listcréer.AddRange(connect.ReadadherentSansClub());
+           listcréer = connect.ReadadherentSansClub();
+            listcréer.AddRange(connect.Readadherent());
 
 
-            
+
             return listcréer;
         }
     }

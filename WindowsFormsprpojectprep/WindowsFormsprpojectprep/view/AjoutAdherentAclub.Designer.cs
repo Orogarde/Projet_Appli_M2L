@@ -31,8 +31,6 @@
             this.listBoxAdherents = new System.Windows.Forms.ListBox();
             this.listBoxClubs = new System.Windows.Forms.ListBox();
             this.buttonAjout = new System.Windows.Forms.Button();
-            this.labelClub = new System.Windows.Forms.Label();
-            this.labelAdherent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxAdherents
@@ -63,31 +61,11 @@
             this.buttonAjout.UseVisualStyleBackColor = true;
             this.buttonAjout.Click += new System.EventHandler(this.buttonAjout_Click);
             // 
-            // labelClub
-            // 
-            this.labelClub.AutoSize = true;
-            this.labelClub.Location = new System.Drawing.Point(387, 261);
-            this.labelClub.Name = "labelClub";
-            this.labelClub.Size = new System.Drawing.Size(35, 13);
-            this.labelClub.TabIndex = 3;
-            this.labelClub.Text = "label1";
-            // 
-            // labelAdherent
-            // 
-            this.labelAdherent.AutoSize = true;
-            this.labelAdherent.Location = new System.Drawing.Point(72, 261);
-            this.labelAdherent.Name = "labelAdherent";
-            this.labelAdherent.Size = new System.Drawing.Size(35, 13);
-            this.labelAdherent.TabIndex = 4;
-            this.labelAdherent.Text = "label2";
-            // 
             // AjoutAdherentAclub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 314);
-            this.Controls.Add(this.labelAdherent);
-            this.Controls.Add(this.labelClub);
             this.Controls.Add(this.buttonAjout);
             this.Controls.Add(this.listBoxClubs);
             this.Controls.Add(this.listBoxAdherents);
@@ -95,7 +73,6 @@
             this.Text = "AjoutAdherentAclub";
             this.Load += new System.EventHandler(this.AjoutAdherentAclub_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -104,7 +81,5 @@
         private System.Windows.Forms.ListBox listBoxAdherents;
         private System.Windows.Forms.ListBox listBoxClubs;
         private System.Windows.Forms.Button buttonAjout;
-        private System.Windows.Forms.Label labelClub;
-        private System.Windows.Forms.Label labelAdherent;
     }
 }
