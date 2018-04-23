@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace WindowsFormsprpojectprep
 {
     public partial class MaisonDesLigues : Form
@@ -15,12 +17,14 @@ namespace WindowsFormsprpojectprep
         ClubManagement listClub;
         AdherentManagement listA;
         TypeClubManagement listType;
+        EvenementManagement listEvent;
         public MaisonDesLigues()
         {
             InitializeComponent();
             listA = new AdherentManagement();
             listClub = new ClubManagement();
             listType = new TypeClubManagement();
+            listEvent = new EvenementManagement();
         }
 
         private void adhérentsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,6 +72,35 @@ namespace WindowsFormsprpojectprep
         {
             AjoutAdherentAclub AjoutAdherentAclub = new AjoutAdherentAclub(listA,listClub);
             AjoutAdherentAclub.ShowDialog();
+        }
+
+        private void ajouterToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            AjoutEvenement ajoutEvent = new AjoutEvenement(listEvent, listClub);
+            ajoutEvent.ShowDialog();
+        }
+
+        private void listerToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ListeEvenement listeEvent = new ListeEvenement(listEvent);
+            listeEvent.ShowDialog();
+        }
+
+        private void supprimerToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            SupprimerEvent suppevent = new SupprimerEvent(listEvent);
+            suppevent.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            desinscrire desins = new desinscrire(listA);
+            desins.ShowDialog();
+        }
+
+        private void clubsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

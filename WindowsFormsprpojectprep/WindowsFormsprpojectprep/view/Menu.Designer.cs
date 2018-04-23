@@ -37,11 +37,12 @@
             this.ajouterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.evenementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.listerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(126, 361);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 400);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,10 +100,12 @@
             this.ajouterToolStripMenuItem1,
             this.listerToolStripMenuItem1,
             this.supprimerToolStripMenuItem1,
-            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem});
+            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.clubsToolStripMenuItem.Name = "clubsToolStripMenuItem";
             this.clubsToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
             this.clubsToolStripMenuItem.Text = "Clubs";
+            this.clubsToolStripMenuItem.Click += new System.EventHandler(this.clubsToolStripMenuItem_Click);
             // 
             // ajouterToolStripMenuItem1
             // 
@@ -125,6 +128,20 @@
             this.supprimerToolStripMenuItem1.Text = "Supprimer";
             this.supprimerToolStripMenuItem1.Click += new System.EventHandler(this.supprimerToolStripMenuItem1_Click);
             // 
+            // ajouterUnAdhérentsÀUnClubToolStripMenuItem
+            // 
+            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Name = "ajouterUnAdhérentsÀUnClubToolStripMenuItem";
+            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Size = new System.Drawing.Size(293, 26);
+            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Text = "Ajouter un adhérents à un club";
+            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnAdhérentsÀUnClubToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(293, 26);
+            this.toolStripMenuItem1.Text = "désinscrire un adhérent à un club";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // evenementsToolStripMenuItem
             // 
             this.evenementsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -140,25 +157,21 @@
             this.ajouterToolStripMenuItem2.Name = "ajouterToolStripMenuItem2";
             this.ajouterToolStripMenuItem2.Size = new System.Drawing.Size(154, 26);
             this.ajouterToolStripMenuItem2.Text = "Ajouter";
+            this.ajouterToolStripMenuItem2.Click += new System.EventHandler(this.ajouterToolStripMenuItem2_Click);
             // 
             // listerToolStripMenuItem2
             // 
             this.listerToolStripMenuItem2.Name = "listerToolStripMenuItem2";
             this.listerToolStripMenuItem2.Size = new System.Drawing.Size(154, 26);
             this.listerToolStripMenuItem2.Text = "Lister";
+            this.listerToolStripMenuItem2.Click += new System.EventHandler(this.listerToolStripMenuItem2_Click);
             // 
             // supprimerToolStripMenuItem2
             // 
             this.supprimerToolStripMenuItem2.Name = "supprimerToolStripMenuItem2";
             this.supprimerToolStripMenuItem2.Size = new System.Drawing.Size(154, 26);
             this.supprimerToolStripMenuItem2.Text = "Supprimer";
-            // 
-            // ajouterUnAdhérentsÀUnClubToolStripMenuItem
-            // 
-            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Name = "ajouterUnAdhérentsÀUnClubToolStripMenuItem";
-            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Size = new System.Drawing.Size(293, 26);
-            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Text = "Ajouter un adhérents à un club";
-            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnAdhérentsÀUnClubToolStripMenuItem_Click);
+            this.supprimerToolStripMenuItem2.Click += new System.EventHandler(this.supprimerToolStripMenuItem2_Click);
             // 
             // MaisonDesLigues
             // 
@@ -167,7 +180,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::WindowsFormsprpojectprep.Properties.Resources.M2L;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(511, 361);
+            this.ClientSize = new System.Drawing.Size(511, 400);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
@@ -200,6 +213,7 @@
         private System.Windows.Forms.ToolStripMenuItem listerToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ajouterUnAdhérentsÀUnClubToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

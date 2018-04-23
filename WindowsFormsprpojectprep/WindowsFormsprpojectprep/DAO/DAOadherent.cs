@@ -115,6 +115,41 @@ namespace WindowsFormsprpojectprep
             }
             return liste;
         }
+        public List<adhérent> ReadadherentAvecClub()
+        {
+            List<adhérent> liste = new List<adhérent>();
+
+            adhérent adhérents;
+
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+                connexion.Open();
+
+                string requete = "SELECT * FROM adherent where adherent.id_club is not Null";
+
+
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                using (MySqlDataReader datareader = cmd.ExecuteReader())
+                {
+                    while (datareader.Read())
+                    {
+                        adhérents = new adhérent((string)datareader["Nom_adherent"],
+                            (string)datareader["Prenom_adherent"], (string)datareader["Ville_adherent"],
+                            (string)datareader["numero_licence"], (string)datareader["Code_Postal_adherent"],
+                            Convert.ToDouble(datareader["cotisation_adherent"]), (DateTime)datareader["Date_naissance_adherent"], (string)datareader["Adresse_adherent"]);
+
+
+
+                        adhérents.id = (int)datareader["id_adherent"];
+
+                        liste.Add(adhérents);
+
+                    }
+
+                }
+            }
+            return liste;
+        }
 
         public void supprimerAdherent(adhérent adhérents)
         {
@@ -136,6 +171,18 @@ namespace WindowsFormsprpojectprep
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@id", adhérents.id);
                 cmd.Parameters.AddWithValue("@idclub", adhérents.club.id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void EnleverAdherentAclub(adhérent adhérents)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+                connexion.Open();
+                string requete = "UPDATE adherent SET id_club = Null WHERE adherent.id_adherent = @id;";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", adhérents.id);
+
                 cmd.ExecuteNonQuery();
             }
         }
