@@ -1,8 +1,9 @@
 ﻿using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class ListeClub : Form
+    public partial class ListeClub : MetroForm
     {
         public ClubManagement Liste;
 
@@ -19,10 +20,10 @@ namespace WindowsFormsprpojectprep
             foreach (var item in Liste.GetClubs ())
             {
 
-                dataGridView1.AutoGenerateColumns = true;
-                dataGridView1.AutoResizeColumns();
+                metroGridClubs.AutoGenerateColumns = true;
+                metroGridClubs.AutoResizeColumns();
                 Liste.listClubs = connect.ReadClub();
-                dataGridView1.DataSource = Liste.GetClubs();
+                metroGridClubs.DataSource = Liste.GetClubs();
 
 
             }

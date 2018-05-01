@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class ListeAdherent : Form
+    public partial class ListeAdherent : MetroForm
     {
         public AdherentManagement adherent;
         
@@ -30,11 +31,11 @@ namespace WindowsFormsprpojectprep
             foreach (var item in adherent.Getadherent())
             {
 
-                dataGridView1.AutoGenerateColumns = true;
-                dataGridView1.AutoResizeColumns();
+                metroGridAdherent.AutoGenerateColumns = true;
+                metroGridAdherent.AutoResizeColumns();
                 adherent.listM = connect.ReadadherentSansClub();
                 adherent.listM.AddRange(connect.Readadherent());
-                dataGridView1.DataSource = adherent.Getadherent();
+                metroGridAdherent.DataSource = adherent.Getadherent();
                 
 
             }
@@ -44,6 +45,11 @@ namespace WindowsFormsprpojectprep
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroGridAdherent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

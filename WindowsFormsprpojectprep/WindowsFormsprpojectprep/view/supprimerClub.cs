@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class supprimerClub : Form
+    public partial class supprimerClub : MetroForm
     {
         public Club clubSelectionner;
         public ClubManagement clubs;
@@ -39,7 +40,9 @@ namespace WindowsFormsprpojectprep
             index = listBoxSup.SelectedIndex;
         }
 
-        private void buttonSup_Click(object sender, EventArgs e)
+       
+
+        private void metroButtonSup_Click(object sender, EventArgs e)
         {
             clubSelectionner = clubs.GetClubliste(index);
             connect.supprimerClub(clubSelectionner);

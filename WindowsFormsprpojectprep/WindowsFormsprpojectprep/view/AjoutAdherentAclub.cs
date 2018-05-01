@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class AjoutAdherentAclub : Form
+    public partial class AjoutAdherentAclub : MetroForm
     {
         DAOadherent connect = new DAOadherent();
         DAOclub connectClub = new DAOclub();
@@ -56,11 +57,13 @@ namespace WindowsFormsprpojectprep
             
         }
 
-        private void buttonAjout_Click(object sender, EventArgs e)
+        
+
+        private void metroButtonAjout_Click(object sender, EventArgs e)
         {
-            adherent =  listAdherents.GetAdhérentliste(indexAdherent);
+            adherent = listAdherents.GetAdhérentliste(indexAdherent);
             club = listClubs.GetClubliste(indexClub);
-           adherent.club = club;
+            adherent.club = club;
             connect.AjoutAdherentAclub(adherent);
 
             listBoxAdherents.Items.Clear();
@@ -70,7 +73,6 @@ namespace WindowsFormsprpojectprep
             {
                 listBoxAdherents.Items.Add(item.nom + "  " + item.prenom);
             }
-
         }
     }
 }

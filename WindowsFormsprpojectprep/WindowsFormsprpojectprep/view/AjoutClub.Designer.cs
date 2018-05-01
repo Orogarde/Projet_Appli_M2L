@@ -31,176 +31,198 @@
             this.textBoxtitre = new System.Windows.Forms.TextBox();
             this.TextBoxVille = new System.Windows.Forms.TextBox();
             this.textBoxMail = new System.Windows.Forms.TextBox();
-            this.textBoxCodePostal = new System.Windows.Forms.TextBox();
             this.textBoxAdresse = new System.Windows.Forms.TextBox();
             this.textBoxUrl = new System.Windows.Forms.TextBox();
-            this.textBoxTel = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.buttonAjout = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.metroButtonAjout = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.maskedTextBoxTel = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCodePostal = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // textBoxtitre
             // 
-            this.textBoxtitre.Location = new System.Drawing.Point(198, 48);
+            this.textBoxtitre.Location = new System.Drawing.Point(98, 71);
             this.textBoxtitre.Name = "textBoxtitre";
             this.textBoxtitre.Size = new System.Drawing.Size(100, 20);
             this.textBoxtitre.TabIndex = 0;
             // 
             // TextBoxVille
             // 
-            this.TextBoxVille.Location = new System.Drawing.Point(198, 152);
+            this.TextBoxVille.Location = new System.Drawing.Point(98, 172);
             this.TextBoxVille.Name = "TextBoxVille";
             this.TextBoxVille.Size = new System.Drawing.Size(100, 20);
             this.TextBoxVille.TabIndex = 1;
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(198, 178);
+            this.textBoxMail.Location = new System.Drawing.Point(98, 198);
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(100, 20);
             this.textBoxMail.TabIndex = 2;
             // 
-            // textBoxCodePostal
-            // 
-            this.textBoxCodePostal.Location = new System.Drawing.Point(198, 126);
-            this.textBoxCodePostal.Name = "textBoxCodePostal";
-            this.textBoxCodePostal.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCodePostal.TabIndex = 3;
-            // 
             // textBoxAdresse
             // 
-            this.textBoxAdresse.Location = new System.Drawing.Point(198, 100);
+            this.textBoxAdresse.Location = new System.Drawing.Point(98, 120);
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(100, 20);
             this.textBoxAdresse.TabIndex = 4;
             // 
             // textBoxUrl
             // 
-            this.textBoxUrl.Location = new System.Drawing.Point(198, 74);
+            this.textBoxUrl.Location = new System.Drawing.Point(98, 94);
             this.textBoxUrl.Name = "textBoxUrl";
             this.textBoxUrl.Size = new System.Drawing.Size(100, 20);
             this.textBoxUrl.TabIndex = 5;
             // 
-            // textBoxTel
-            // 
-            this.textBoxTel.Location = new System.Drawing.Point(198, 204);
-            this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTel.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(146, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Titre";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(146, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Url";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(146, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Adresse";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(134, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Telephone";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(146, 185);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Mail";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(146, 161);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Ville";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(129, 133);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Code postal";
-            // 
-            // buttonAjout
-            // 
-            this.buttonAjout.Location = new System.Drawing.Point(398, 227);
-            this.buttonAjout.Name = "buttonAjout";
-            this.buttonAjout.Size = new System.Drawing.Size(75, 23);
-            this.buttonAjout.TabIndex = 17;
-            this.buttonAjout.Text = "Ajouter";
-            this.buttonAjout.UseVisualStyleBackColor = true;
-            this.buttonAjout.Click += new System.EventHandler(this.buttonAjout_Click);
-            // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.Teal;
+            this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(363, 48);
+            this.listBox1.Location = new System.Drawing.Point(351, 93);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 160);
             this.listBox1.TabIndex = 18;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // metroButtonAjout
+            // 
+            this.metroButtonAjout.Highlight = true;
+            this.metroButtonAjout.Location = new System.Drawing.Point(213, 264);
+            this.metroButtonAjout.Name = "metroButtonAjout";
+            this.metroButtonAjout.Size = new System.Drawing.Size(96, 31);
+            this.metroButtonAjout.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonAjout.TabIndex = 19;
+            this.metroButtonAjout.Text = "Ajouter un club";
+            this.metroButtonAjout.UseCustomBackColor = true;
+            this.metroButtonAjout.UseSelectable = true;
+            this.metroButtonAjout.UseStyleColors = true;
+            this.metroButtonAjout.Click += new System.EventHandler(this.metroButtonAjout_Click);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(52, 68);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(42, 19);
+            this.metroLabel1.TabIndex = 20;
+            this.metroLabel1.Text = "Titre :";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(30, 119);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(62, 19);
+            this.metroLabel2.TabIndex = 21;
+            this.metroLabel2.Text = "Adresse :";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(60, 94);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel3.TabIndex = 22;
+            this.metroLabel3.Text = "Url :";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(6, 145);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel4.TabIndex = 23;
+            this.metroLabel4.Text = "Code Postal :";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(51, 171);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel5.TabIndex = 24;
+            this.metroLabel5.Text = "Ville : ";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(50, 197);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel6.TabIndex = 25;
+            this.metroLabel6.Text = "Mail :";
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(15, 223);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel7.TabIndex = 26;
+            this.metroLabel7.Text = "Téléphone :";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(317, 69);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(183, 19);
+            this.metroLabel8.TabIndex = 27;
+            this.metroLabel8.Text = "Sélectionner un Type de club :";
+            // 
+            // maskedTextBoxTel
+            // 
+            this.maskedTextBoxTel.Location = new System.Drawing.Point(98, 224);
+            this.maskedTextBoxTel.Mask = "00 00 00 00 00 00";
+            this.maskedTextBoxTel.Name = "maskedTextBoxTel";
+            this.maskedTextBoxTel.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxTel.TabIndex = 28;
+            // 
+            // maskedTextBoxCodePostal
+            // 
+            this.maskedTextBoxCodePostal.Location = new System.Drawing.Point(98, 146);
+            this.maskedTextBoxCodePostal.Mask = "00000";
+            this.maskedTextBoxCodePostal.Name = "maskedTextBoxCodePostal";
+            this.maskedTextBoxCodePostal.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxCodePostal.TabIndex = 29;
+            // 
             // AjoutClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 318);
+            this.ClientSize = new System.Drawing.Size(521, 318);
+            this.Controls.Add(this.maskedTextBoxCodePostal);
+            this.Controls.Add(this.maskedTextBoxTel);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.metroLabel7);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.metroButtonAjout);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.buttonAjout);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxTel);
             this.Controls.Add(this.textBoxUrl);
             this.Controls.Add(this.textBoxAdresse);
-            this.Controls.Add(this.textBoxCodePostal);
             this.Controls.Add(this.textBoxMail);
             this.Controls.Add(this.TextBoxVille);
             this.Controls.Add(this.textBoxtitre);
+            this.MaximumSize = new System.Drawing.Size(521, 318);
+            this.MinimumSize = new System.Drawing.Size(521, 318);
             this.Name = "AjoutClub";
-            this.Text = "AjoutClub";
+            this.Style = MetroFramework.MetroColorStyle.Teal;
+            this.Text = "Ajouter un Club";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.AjoutClub_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,18 +234,19 @@
         private System.Windows.Forms.TextBox textBoxtitre;
         private System.Windows.Forms.TextBox TextBoxVille;
         private System.Windows.Forms.TextBox textBoxMail;
-        private System.Windows.Forms.TextBox textBoxCodePostal;
         private System.Windows.Forms.TextBox textBoxAdresse;
         private System.Windows.Forms.TextBox textBoxUrl;
-        private System.Windows.Forms.TextBox textBoxTel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button buttonAjout;
         private System.Windows.Forms.ListBox listBox1;
+        private MetroFramework.Controls.MetroButton metroButtonAjout;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxTel;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCodePostal;
     }
 }

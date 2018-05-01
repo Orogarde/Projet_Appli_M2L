@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class Supprimer : Form
+    public partial class Supprimer : MetroForm
     {
         public adhérent adhérentselectionner;
         
@@ -39,31 +40,6 @@ namespace WindowsFormsprpojectprep
 
         }
 
-        private void buttonSupprimer_Click(object sender, EventArgs e)
-        {
-             
-
-           adhérentselectionner= adherent.GetAdhérentliste(index);
-
-
-            adherent.GetAdhérentliste(index);
-            
-           
-            connect.supprimerAdherent(adhérentselectionner);
-            //  adherent.suppression(index);
-            
-            
-            listBoxSupprimer.Items.Clear();
-            adherent.listM = connect.ReadadherentSansClub();
-            adherent.listM.AddRange(connect.Readadherent());
-            foreach (var item in adherent.listM)
-            {
-                listBoxSupprimer.Items.Add(item.nom + " " + item.prenom);
-            }
-
-
-
-        }
 
 
 
@@ -84,10 +60,33 @@ namespace WindowsFormsprpojectprep
         private void listBoxSupprimer_SelectedIndexChanged(object sender, EventArgs e)
         {
             index = listBoxSupprimer.SelectedIndex;
-            label1.Text =Convert.ToString(index);
+            
             
            // adhérentselectionner = listBoxSupprimer.SelectedIted;
             
+        }
+
+        private void metroButtonSupprimer_Click(object sender, EventArgs e)
+        {
+
+            adhérentselectionner = adherent.GetAdhérentliste(index);
+
+
+            adherent.GetAdhérentliste(index);
+
+
+            connect.supprimerAdherent(adhérentselectionner);
+            //  adherent.suppression(index);
+
+
+            listBoxSupprimer.Items.Clear();
+            adherent.listM = connect.ReadadherentSansClub();
+            adherent.listM.AddRange(connect.Readadherent());
+            foreach (var item in adherent.listM)
+            {
+                listBoxSupprimer.Items.Add(item.nom + " " + item.prenom);
+            }
+
         }
     }
 }

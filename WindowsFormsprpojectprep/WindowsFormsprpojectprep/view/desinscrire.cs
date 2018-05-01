@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class desinscrire : Form
+    public partial class desinscrire : MetroForm
     {
         public adhérent adhérentselectionner;
         DAOadherent connect = new DAOadherent();
@@ -40,7 +41,9 @@ namespace WindowsFormsprpojectprep
             index = listBoxadherent.SelectedIndex;
         }
 
-        private void buttondesinscrire_Click(object sender, EventArgs e)
+       
+
+        private void metroButtonDesinscrire_Click(object sender, EventArgs e)
         {
             adhérentselectionner = adherent.GetAdhérentliste(index);
 
@@ -54,13 +57,11 @@ namespace WindowsFormsprpojectprep
 
             listBoxadherent.Items.Clear();
             adherent.listM = connect.ReadadherentAvecClub();
-            
+
             foreach (var item in adherent.listM)
             {
                 listBoxadherent.Items.Add(item.nom + " " + item.prenom);
             }
-
-
         }
     }
 }

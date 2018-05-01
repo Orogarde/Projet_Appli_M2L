@@ -29,37 +29,47 @@
         private void InitializeComponent()
         {
             this.listBoxSup = new System.Windows.Forms.ListBox();
-            this.buttonSup = new System.Windows.Forms.Button();
+            this.metroButtonSup = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // listBoxSup
             // 
+            this.listBoxSup.BackColor = System.Drawing.Color.Teal;
+            this.listBoxSup.ForeColor = System.Drawing.Color.White;
             this.listBoxSup.FormattingEnabled = true;
-            this.listBoxSup.Location = new System.Drawing.Point(12, 20);
+            this.listBoxSup.Location = new System.Drawing.Point(11, 63);
             this.listBoxSup.Name = "listBoxSup";
             this.listBoxSup.Size = new System.Drawing.Size(483, 173);
             this.listBoxSup.TabIndex = 0;
             this.listBoxSup.SelectedIndexChanged += new System.EventHandler(this.listBoxSup_SelectedIndexChanged);
             // 
-            // buttonSup
+            // metroButtonSup
             // 
-            this.buttonSup.Location = new System.Drawing.Point(216, 288);
-            this.buttonSup.Name = "buttonSup";
-            this.buttonSup.Size = new System.Drawing.Size(75, 23);
-            this.buttonSup.TabIndex = 1;
-            this.buttonSup.Text = "Supprimer";
-            this.buttonSup.UseVisualStyleBackColor = true;
-            this.buttonSup.Click += new System.EventHandler(this.buttonSup_Click);
+            this.metroButtonSup.Highlight = true;
+            this.metroButtonSup.Location = new System.Drawing.Point(184, 277);
+            this.metroButtonSup.Name = "metroButtonSup";
+            this.metroButtonSup.Size = new System.Drawing.Size(139, 23);
+            this.metroButtonSup.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonSup.TabIndex = 2;
+            this.metroButtonSup.Text = "Supprimer un club";
+            this.metroButtonSup.UseCustomBackColor = true;
+            this.metroButtonSup.UseSelectable = true;
+            this.metroButtonSup.UseStyleColors = true;
+            this.metroButtonSup.Click += new System.EventHandler(this.metroButtonSup_Click);
             // 
             // supprimerClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 323);
-            this.Controls.Add(this.buttonSup);
+            this.Controls.Add(this.metroButtonSup);
             this.Controls.Add(this.listBoxSup);
+            this.MaximumSize = new System.Drawing.Size(507, 323);
+            this.MinimumSize = new System.Drawing.Size(507, 323);
             this.Name = "supprimerClub";
-            this.Text = "supprimerClub";
+            this.Style = MetroFramework.MetroColorStyle.Teal;
+            this.Text = "Supprimer un Club";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.supprimerClub_Load);
             this.ResumeLayout(false);
 
@@ -68,6 +78,6 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBoxSup;
-        private System.Windows.Forms.Button buttonSup;
+        private MetroFramework.Controls.MetroButton metroButtonSup;
     }
 }
