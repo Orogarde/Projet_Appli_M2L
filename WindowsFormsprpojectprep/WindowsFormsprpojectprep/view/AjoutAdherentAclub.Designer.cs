@@ -103,7 +103,7 @@
             this.MinimumSize = new System.Drawing.Size(509, 339);
             this.Name = "AjoutAdherentAclub";
             this.Style = MetroFramework.MetroColorStyle.Teal;
-            this.Text = "AjoutAdherentAclub";
+            this.Text = "Ajouter un adhérent à club";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.AjoutAdherentAclub_Load);
             this.ResumeLayout(false);

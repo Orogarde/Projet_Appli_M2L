@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class ListeEvenement : Form
+    public partial class ListeEvenement : MetroForm
     {
         public EvenementManagement liste;
 
@@ -27,10 +28,10 @@ namespace WindowsFormsprpojectprep
             foreach (var item in liste.listEvenement)
             {
 
-                dataGridViewEvent.AutoGenerateColumns = true;
-                dataGridViewEvent.AutoResizeColumns();
+                metroGridEvent.AutoGenerateColumns = true;
+                metroGridEvent.AutoResizeColumns();
                 liste.listEvenement = connect.ReadEvenement();
-                dataGridViewEvent.DataSource = liste.GetEvenements();
+                metroGridEvent.DataSource = liste.GetEvenements();
 
 
             }

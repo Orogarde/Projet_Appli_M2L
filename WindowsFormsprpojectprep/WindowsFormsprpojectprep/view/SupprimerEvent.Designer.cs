@@ -29,37 +29,47 @@
         private void InitializeComponent()
         {
             this.listBoxEvent = new System.Windows.Forms.ListBox();
-            this.buttonSupprimer = new System.Windows.Forms.Button();
+            this.metroButtonSup = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // listBoxEvent
             // 
+            this.listBoxEvent.BackColor = System.Drawing.Color.Teal;
+            this.listBoxEvent.ForeColor = System.Drawing.Color.White;
             this.listBoxEvent.FormattingEnabled = true;
-            this.listBoxEvent.Location = new System.Drawing.Point(113, 62);
+            this.listBoxEvent.Location = new System.Drawing.Point(23, 90);
             this.listBoxEvent.Name = "listBoxEvent";
-            this.listBoxEvent.Size = new System.Drawing.Size(334, 147);
+            this.listBoxEvent.Size = new System.Drawing.Size(518, 147);
             this.listBoxEvent.TabIndex = 0;
             this.listBoxEvent.SelectedIndexChanged += new System.EventHandler(this.listBoxEvent_SelectedIndexChanged);
             // 
-            // buttonSupprimer
+            // metroButtonSup
             // 
-            this.buttonSupprimer.Location = new System.Drawing.Point(238, 269);
-            this.buttonSupprimer.Name = "buttonSupprimer";
-            this.buttonSupprimer.Size = new System.Drawing.Size(75, 23);
-            this.buttonSupprimer.TabIndex = 1;
-            this.buttonSupprimer.Text = "supprimer";
-            this.buttonSupprimer.UseVisualStyleBackColor = true;
-            this.buttonSupprimer.Click += new System.EventHandler(this.buttonSupprimer_Click);
+            this.metroButtonSup.Highlight = true;
+            this.metroButtonSup.Location = new System.Drawing.Point(209, 298);
+            this.metroButtonSup.MaximumSize = new System.Drawing.Size(148, 23);
+            this.metroButtonSup.MinimumSize = new System.Drawing.Size(148, 23);
+            this.metroButtonSup.Name = "metroButtonSup";
+            this.metroButtonSup.Size = new System.Drawing.Size(148, 23);
+            this.metroButtonSup.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonSup.TabIndex = 2;
+            this.metroButtonSup.Text = "Supprimer un événement";
+            this.metroButtonSup.UseCustomBackColor = true;
+            this.metroButtonSup.UseSelectable = true;
+            this.metroButtonSup.UseStyleColors = true;
+            this.metroButtonSup.Click += new System.EventHandler(this.metroButtonSup_Click);
             // 
             // SupprimerEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 333);
-            this.Controls.Add(this.buttonSupprimer);
+            this.Controls.Add(this.metroButtonSup);
             this.Controls.Add(this.listBoxEvent);
             this.Name = "SupprimerEvent";
-            this.Text = "Supprimer";
+            this.Style = MetroFramework.MetroColorStyle.Teal;
+            this.Text = "Supprimer un événement";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.SupprimerEvent_Load);
             this.ResumeLayout(false);
 
@@ -68,6 +78,6 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBoxEvent;
-        private System.Windows.Forms.Button buttonSupprimer;
+        private MetroFramework.Controls.MetroButton metroButtonSup;
     }
 }

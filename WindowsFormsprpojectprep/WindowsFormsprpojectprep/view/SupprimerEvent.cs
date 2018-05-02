@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class SupprimerEvent : Form
+    public partial class SupprimerEvent : MetroForm
     {
         public Evenement evenement;
         public EvenementManagement liste;
@@ -41,9 +42,16 @@ namespace WindowsFormsprpojectprep
            
         }
 
-        private void buttonSupprimer_Click(object sender, EventArgs e)
+       
+
+
+
+
+        
+
+        private void metroButtonSup_Click(object sender, EventArgs e)
         {
-                evenement = liste.GetEvenementliste(index);
+            evenement = liste.GetEvenementliste(index);
 
 
 
@@ -60,8 +68,6 @@ namespace WindowsFormsprpojectprep
             {
                 listBoxEvent.Items.Add(item.titreEvenement);
             }
-
-
 
 
         }

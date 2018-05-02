@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace WindowsFormsprpojectprep
 {
-    public partial class AjoutEvenement : Form
+    public partial class AjoutEvenement : MetroForm
     {
         DAOclub connectClub = new DAOclub();
         DAOEvenement connect = new DAOEvenement();
@@ -27,17 +28,7 @@ namespace WindowsFormsprpojectprep
         }
 
 
-        private void buttonAjout_Click_1(object sender, EventArgs e)
-        {
-            string titre = textBoxTitre.Text;
-            DateTime dateDebut = monthCalendarDebut.SelectionStart;
-            DateTime dateFin = monthCalendarFin.SelectionStart;
-            Evenement evenement = new Evenement(dateDebut, dateFin, titre);
-          
-            evenement.club = listClub.GetClubliste(index);
-            connect.ajouterEvenement(evenement);
-            textBoxTitre.Text = string.Empty;
-        }
+
  
      
 
@@ -56,6 +47,18 @@ namespace WindowsFormsprpojectprep
         private void listBoxClub_SelectedIndexChanged(object sender, EventArgs e)
         {
             index = listBoxClub.SelectedIndex;
+        }
+
+        private void metroButtonAjout_Click(object sender, EventArgs e)
+        {
+            string titre = textBoxTitre.Text;
+            DateTime dateDebut = monthCalendarDebut.SelectionStart;
+            DateTime dateFin = monthCalendarFin.SelectionStart;
+            Evenement evenement = new Evenement(dateDebut, dateFin, titre);
+
+            evenement.club = listClub.GetClubliste(index);
+            connect.ajouterEvenement(evenement);
+            textBoxTitre.Text = string.Empty;
         }
     }
 }
