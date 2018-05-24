@@ -85,6 +85,7 @@
             this.metroGridAdherent.UseCustomForeColor = true;
             this.metroGridAdherent.UseStyleColors = true;
             this.metroGridAdherent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGridAdherent_CellContentClick);
+            this.metroGridAdherent.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.metroGridAdherent_RowHeaderMouseDoubleClick);
             // 
             // ListeAdherent
             // 

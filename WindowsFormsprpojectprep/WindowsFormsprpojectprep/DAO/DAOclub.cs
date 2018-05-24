@@ -82,6 +82,52 @@ namespace WindowsFormsprpojectprep
                 cmd.ExecuteNonQuery();
             }
         }
+        public int countAdherentClub(Club club)
+        {
+            int count=0;
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+
+                connexion.Open();
+               string requete = "call count_adherent(@id)";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", club.id);
+                cmd.ExecuteNonQuery();
+
+                using (MySqlDataReader datareader = cmd.ExecuteReader())
+                {
+                    while (datareader.Read())
+                    {
+                        count = Convert.ToInt32(datareader["nbradh"]);
+                    }
+                }
+                
+            }
+            return count;
+        }
+        public int countEventClub(Club club)
+        {
+            int count = 0;
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+
+                connexion.Open();
+                string requete = "call count_event(@id)";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", club.id);
+                cmd.ExecuteNonQuery();
+
+                using (MySqlDataReader datareader = cmd.ExecuteReader())
+                {
+                    while (datareader.Read())
+                    {
+                        count = Convert.ToInt32(datareader["nbevent"]);
+                    }
+                }
+
+            }
+            return count;
+        }
         public void ajouterClub(Club club)
         {
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
@@ -97,6 +143,25 @@ namespace WindowsFormsprpojectprep
                 cmd.Parameters.AddWithValue("@mail", club.mail);
                 cmd.Parameters.AddWithValue("@telephone", club.numero);
                 cmd.Parameters.AddWithValue("@idtype", club.Type.id);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void ModifClub(Club club)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+                connexion.Open();
+                string requete = "UPDATE `club` SET `Titre_club` = @titre, `url_club` = @url, `Adresse_club` = @adresse, `Code_Postal_club` = @code, `Ville_club` = @ville, `mail_club` = @mail, `telephone_club` = @telephone WHERE `club`.`id_club` = @id ;";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@titre", club.titre);
+                cmd.Parameters.AddWithValue("@url", club.url);
+                cmd.Parameters.AddWithValue("@adresse", club.Adresse);
+                cmd.Parameters.AddWithValue("@code", club.codepostal);
+                cmd.Parameters.AddWithValue("@ville", club.ville);
+                cmd.Parameters.AddWithValue("@mail", club.mail);
+                cmd.Parameters.AddWithValue("@telephone", club.numero);
+                cmd.Parameters.AddWithValue("@id", club.id);
 
                 cmd.ExecuteNonQuery();
             }

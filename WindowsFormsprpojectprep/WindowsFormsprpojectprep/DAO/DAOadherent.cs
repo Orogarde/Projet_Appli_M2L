@@ -204,6 +204,24 @@ namespace WindowsFormsprpojectprep
                 cmd.ExecuteNonQuery();
             }
         }
+        public void ModifAdherent(adhérent adhérents)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+                connexion.Open();
+                string requete = "UPDATE `adherent` SET `Nom_adherent` = @nom, `Prenom_adherent` = @prenom, `Date_naissance_adherent` = @date, `Adresse_adherent` = @adresse, `Code_Postal_adherent` = @codepostal, `Ville_adherent` = @ville, `cotisation_adherent` = @cotisation WHERE `adherent`.`id_adherent` = @id";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@nom", adhérents.nom);
+                cmd.Parameters.AddWithValue("@prenom", adhérents.prenom);
+                cmd.Parameters.AddWithValue("@date", adhérents.date);
+                cmd.Parameters.AddWithValue("@adresse", adhérents.Adresse);
+                cmd.Parameters.AddWithValue("@codepostal", adhérents.codepostal);
+                cmd.Parameters.AddWithValue("@ville", adhérents.ville);
+                cmd.Parameters.AddWithValue("@cotisation", adhérents.cotisation);
+                cmd.Parameters.AddWithValue("@id", adhérents.id);
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }
        

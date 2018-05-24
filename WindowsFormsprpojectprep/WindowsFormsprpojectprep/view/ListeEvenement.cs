@@ -14,6 +14,8 @@ namespace WindowsFormsprpojectprep
     public partial class ListeEvenement : MetroForm
     {
         public EvenementManagement liste;
+        public Evenement eventModif;
+        public int index;
 
         DAOEvenement connect = new DAOEvenement();
 
@@ -35,6 +37,14 @@ namespace WindowsFormsprpojectprep
 
 
             }
+        }
+
+        private void metroGridEvent_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+         index = metroGridEvent.CurrentRow.Index;
+          eventModif =  liste.GetEvenementliste(index);
+            ModifEvenement modif = new ModifEvenement(liste, eventModif);
+            modif.ShowDialog();
         }
     }
 }

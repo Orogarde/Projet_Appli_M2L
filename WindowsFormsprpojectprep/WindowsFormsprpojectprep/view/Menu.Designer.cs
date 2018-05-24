@@ -43,6 +43,7 @@
             this.ajouterToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.listerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,10 +106,11 @@
             this.listerToolStripMenuItem1,
             this.supprimerToolStripMenuItem1,
             this.ajouterUnAdhérentsÀUnClubToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.statistiquesToolStripMenuItem});
             this.clubsToolStripMenuItem.ForeColor = System.Drawing.Color.Teal;
             this.clubsToolStripMenuItem.Name = "clubsToolStripMenuItem";
-            this.clubsToolStripMenuItem.Size = new System.Drawing.Size(61, 25);
+            this.clubsToolStripMenuItem.Size = new System.Drawing.Size(78, 34);
             this.clubsToolStripMenuItem.Text = "Clubs";
             this.clubsToolStripMenuItem.Click += new System.EventHandler(this.clubsToolStripMenuItem_Click);
             // 
@@ -116,7 +118,7 @@
             // 
             this.ajouterToolStripMenuItem1.ForeColor = System.Drawing.Color.Teal;
             this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(310, 26);
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(405, 34);
             this.ajouterToolStripMenuItem1.Text = "Ajouter";
             this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
             // 
@@ -124,7 +126,7 @@
             // 
             this.listerToolStripMenuItem1.ForeColor = System.Drawing.Color.Teal;
             this.listerToolStripMenuItem1.Name = "listerToolStripMenuItem1";
-            this.listerToolStripMenuItem1.Size = new System.Drawing.Size(310, 26);
+            this.listerToolStripMenuItem1.Size = new System.Drawing.Size(405, 34);
             this.listerToolStripMenuItem1.Text = "Lister";
             this.listerToolStripMenuItem1.Click += new System.EventHandler(this.listerToolStripMenuItem1_Click);
             // 
@@ -132,7 +134,7 @@
             // 
             this.supprimerToolStripMenuItem1.ForeColor = System.Drawing.Color.Teal;
             this.supprimerToolStripMenuItem1.Name = "supprimerToolStripMenuItem1";
-            this.supprimerToolStripMenuItem1.Size = new System.Drawing.Size(310, 26);
+            this.supprimerToolStripMenuItem1.Size = new System.Drawing.Size(405, 34);
             this.supprimerToolStripMenuItem1.Text = "Supprimer";
             this.supprimerToolStripMenuItem1.Click += new System.EventHandler(this.supprimerToolStripMenuItem1_Click);
             // 
@@ -140,7 +142,7 @@
             // 
             this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.ForeColor = System.Drawing.Color.Teal;
             this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Name = "ajouterUnAdhérentsÀUnClubToolStripMenuItem";
-            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Size = new System.Drawing.Size(310, 26);
+            this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Size = new System.Drawing.Size(405, 34);
             this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Text = "Ajouter un adhérents à un club";
             this.ajouterUnAdhérentsÀUnClubToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnAdhérentsÀUnClubToolStripMenuItem_Click);
             // 
@@ -148,7 +150,7 @@
             // 
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Teal;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(310, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(405, 34);
             this.toolStripMenuItem1.Text = "désinscrire un adhérent à un club";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -163,14 +165,14 @@
             this.supprimerToolStripMenuItem2});
             this.evenementsToolStripMenuItem.ForeColor = System.Drawing.Color.Teal;
             this.evenementsToolStripMenuItem.Name = "evenementsToolStripMenuItem";
-            this.evenementsToolStripMenuItem.Size = new System.Drawing.Size(106, 25);
+            this.evenementsToolStripMenuItem.Size = new System.Drawing.Size(142, 34);
             this.evenementsToolStripMenuItem.Text = "Evenements";
             // 
             // ajouterToolStripMenuItem2
             // 
             this.ajouterToolStripMenuItem2.ForeColor = System.Drawing.Color.Teal;
             this.ajouterToolStripMenuItem2.Name = "ajouterToolStripMenuItem2";
-            this.ajouterToolStripMenuItem2.Size = new System.Drawing.Size(180, 26);
+            this.ajouterToolStripMenuItem2.Size = new System.Drawing.Size(188, 34);
             this.ajouterToolStripMenuItem2.Text = "Ajouter";
             this.ajouterToolStripMenuItem2.Click += new System.EventHandler(this.ajouterToolStripMenuItem2_Click);
             // 
@@ -178,7 +180,7 @@
             // 
             this.listerToolStripMenuItem2.ForeColor = System.Drawing.Color.Teal;
             this.listerToolStripMenuItem2.Name = "listerToolStripMenuItem2";
-            this.listerToolStripMenuItem2.Size = new System.Drawing.Size(180, 26);
+            this.listerToolStripMenuItem2.Size = new System.Drawing.Size(188, 34);
             this.listerToolStripMenuItem2.Text = "Lister";
             this.listerToolStripMenuItem2.Click += new System.EventHandler(this.listerToolStripMenuItem2_Click);
             // 
@@ -186,9 +188,17 @@
             // 
             this.supprimerToolStripMenuItem2.ForeColor = System.Drawing.Color.Teal;
             this.supprimerToolStripMenuItem2.Name = "supprimerToolStripMenuItem2";
-            this.supprimerToolStripMenuItem2.Size = new System.Drawing.Size(180, 26);
+            this.supprimerToolStripMenuItem2.Size = new System.Drawing.Size(188, 34);
             this.supprimerToolStripMenuItem2.Text = "Supprimer";
             this.supprimerToolStripMenuItem2.Click += new System.EventHandler(this.supprimerToolStripMenuItem2_Click);
+            // 
+            // statistiquesToolStripMenuItem
+            // 
+            this.statistiquesToolStripMenuItem.ForeColor = System.Drawing.Color.Teal;
+            this.statistiquesToolStripMenuItem.Name = "statistiquesToolStripMenuItem";
+            this.statistiquesToolStripMenuItem.Size = new System.Drawing.Size(405, 34);
+            this.statistiquesToolStripMenuItem.Text = "Statistiques";
+            this.statistiquesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesToolStripMenuItem_Click);
             // 
             // MaisonDesLigues
             // 
@@ -236,6 +246,7 @@
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ajouterUnAdhérentsÀUnClubToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem statistiquesToolStripMenuItem;
     }
 }
 

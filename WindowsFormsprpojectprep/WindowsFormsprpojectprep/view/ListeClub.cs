@@ -8,6 +8,8 @@ namespace WindowsFormsprpojectprep
         public ClubManagement Liste;
 
         DAOclub connect = new DAOclub();
+        public int index;
+        public Club clubAmodif;
 
         public ListeClub(ClubManagement club)
         {
@@ -27,6 +29,14 @@ namespace WindowsFormsprpojectprep
 
 
             }
+        }
+
+        private void metroGridClubs_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            index = metroGridClubs.CurrentRow.Index;
+            clubAmodif = Liste.GetClubliste(index);
+            ModifClub modif = new ModifClub(Liste, clubAmodif);
+            modif.ShowDialog();
         }
     }
 }

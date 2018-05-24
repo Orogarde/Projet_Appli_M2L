@@ -102,5 +102,11 @@ namespace WindowsFormsprpojectprep
         {
 
         }
+
+        private void statistiquesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stats stat = new Stats(listClub);
+            stat.ShowDialog();
+        }
     }
 }

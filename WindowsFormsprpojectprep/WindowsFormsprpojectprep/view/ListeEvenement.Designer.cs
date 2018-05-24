@@ -86,6 +86,7 @@
             this.metroGridEvent.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroGridEvent.UseCustomForeColor = true;
             this.metroGridEvent.UseStyleColors = true;
+            this.metroGridEvent.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.metroGridEvent_RowHeaderMouseDoubleClick);
             // 
             // ListeEvenement
             // 

@@ -13,6 +13,8 @@ namespace WindowsFormsprpojectprep
 {
     public partial class ListeAdherent : MetroForm
     {
+        public int index;
+        adhérent adherentModif;
         public AdherentManagement adherent;
         
         DAOadherent connect = new DAOadherent();
@@ -51,6 +53,15 @@ namespace WindowsFormsprpojectprep
 
         private void metroGridAdherent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void metroGridAdherent_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            index = metroGridAdherent.CurrentRow.Index;
+            adherentModif = adherent.GetAdhérentliste(index);
+            ModifierAdherent modif = new ModifierAdherent(adherent, adherentModif);
+            modif.ShowDialog();
 
         }
     }

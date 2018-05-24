@@ -88,11 +88,29 @@
     <Compile Include="view\AjoutAdherentAclub.Designer.cs">
       <DependentUpon>AjoutAdherentAclub.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\ModifEvenement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ModifEvenement.Designer.cs">
+      <DependentUpon>ModifEvenement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ModifClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ModifClub.Designer.cs">
+      <DependentUpon>ModifClub.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\AjoutClub.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\AjoutClub.Designer.cs">
       <DependentUpon>AjoutClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ModifierAdherent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ModifierAdherent.Designer.cs">
+      <DependentUpon>ModifierAdherent.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Ajouter.cs">
       <SubType>Form</SubType>
@@ -140,6 +158,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\Stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Stats.Designer.cs">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Supprimer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,8 +185,17 @@
     <EmbeddedResource Include="view\AjoutAdherentAclub.resx">
       <DependentUpon>AjoutAdherentAclub.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\ModifEvenement.resx">
+      <DependentUpon>ModifEvenement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ModifClub.resx">
+      <DependentUpon>ModifClub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\AjoutClub.resx">
       <DependentUpon>AjoutClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ModifierAdherent.resx">
+      <DependentUpon>ModifierAdherent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Ajouter.resx">
       <DependentUpon>Ajouter.cs</DependentUpon>
@@ -195,6 +228,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="view\Stats.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Supprimer.resx">
       <DependentUpon>Supprimer.cs</DependentUpon>
     </EmbeddedResource>

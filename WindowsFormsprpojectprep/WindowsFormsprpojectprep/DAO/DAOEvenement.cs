@@ -108,5 +108,20 @@ namespace WindowsFormsprpojectprep
                 cmd.ExecuteNonQuery();
             }
         }
+        public void ModifEvenement(Evenement evenement)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            {
+                connexion.Open();
+                string requete ="UPDATE `evenement` SET `Titre_evenement` = @titre, `debut_evenement` = @dateDebut, `fin_evenement` = @dateFin WHERE `evenement`.`id_evenement` = @id ; ";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@titre", evenement.titreEvenement);
+                cmd.Parameters.AddWithValue("@dateDebut", evenement.debutEvenement);
+                cmd.Parameters.AddWithValue("@dateFin", evenement.finEvenement);
+                cmd.Parameters.AddWithValue("@id", evenement.idEvenement);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }
