@@ -15,6 +15,7 @@ namespace WindowsFormsprpojectprep
     public partial class Ajouter : MetroForm
     {
         public AdherentManagement listAd;
+        public Random rand = new Random();
         
         public Ajouter(AdherentManagement listAdherent)
         {
@@ -41,24 +42,33 @@ namespace WindowsFormsprpojectprep
 
         private void metroButtonAjouter_Click(object sender, EventArgs e)
         {
-            //string nom = textBoxN.Text;
-            string nom = textBoxN.Text;
-            string prenom = textBoxP.Text;
-            string ville = textBoxVille.Text;
-            double cotisation = Convert.ToDouble(maskedTextBoxCotisation.Text);
-            string numero = textBoxN.Text.ToUpper() + maskedTextBoxCotisation.Text + textBoxP.Text.ToUpper();
-            string codepostal = maskedTextBoxCodePostal.Text;
+            
+            try
+            {
+                //string nom = textBoxN.Text;
+                string nom = textBoxN.Text;
+                string prenom = textBoxP.Text;
+                string ville = textBoxVille.Text;
+                double cotisation = Convert.ToDouble(maskedTextBoxCotisation.Text);
+                string numero =Convert.ToString( rand.Next());
+                string codepostal = maskedTextBoxCodePostal.Text;
 
-            string adresse = textBoxAdresse.Text;
+                string adresse = textBoxAdresse.Text;
 
-            DateTime date = monthCalendar1.SelectionStart;
+                DateTime date = monthCalendar1.SelectionStart;
 
-            adhérent adherent = new adhérent(nom, prenom, ville, numero, codepostal, cotisation, date, adresse);
-            //  listAd.AjouterAdherent(adherent);
-            adherent.date = date;
-            DAOadherent connect = new DAOadherent();
-            connect.ajouterAdherent(adherent);
-            MetroFramework.MetroMessageBox.Show(this, "l'adhérent a été ajouter à la base de données avec succès !", "Félicitation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                adhérent adherent = new adhérent(nom, prenom, ville, numero, codepostal, cotisation, date, adresse);
+                //  listAd.AjouterAdherent(adherent);
+                adherent.date = date;
+                
+                DAOadherent connect = new DAOadherent();
+                connect.ajouterAdherent(adherent);
+                MetroFramework.MetroMessageBox.Show(this, "l'adhérent a été ajouté à la base de données avec succès !", "Félicitation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MetroFramework.MetroMessageBox.Show(this, "problème lors de la saisie !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             textBoxN.Text = string.Empty;
             textBoxP.Text = string.Empty;
             maskedTextBoxCodePostal.Text = string.Empty;

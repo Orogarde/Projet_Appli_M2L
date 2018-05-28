@@ -38,8 +38,9 @@ namespace WindowsFormsprpojectprep
 
         private void listBoxEvent_SelectedIndexChanged(object sender, EventArgs e)
         {
-            index = listBoxEvent.SelectedIndex;
-           
+            
+                index = listBoxEvent.SelectedIndex;
+            
         }
 
        

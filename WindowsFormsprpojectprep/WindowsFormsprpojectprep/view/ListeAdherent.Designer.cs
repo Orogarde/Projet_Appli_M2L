@@ -32,6 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroGridAdherent = new MetroFramework.Controls.MetroGrid();
+            this.prenom_adh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom_adh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.club_adh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adresse_adh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adh_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cotisation_adh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeros_adh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridAdherent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +60,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.metroGridAdherent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGridAdherent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.metroGridAdherent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.prenom_adh,
+            this.nom_adh,
+            this.club_adh,
+            this.Adresse_adh,
+            this.adh_date,
+            this.cotisation_adh,
+            this.numeros_adh});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -87,6 +102,48 @@
             this.metroGridAdherent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGridAdherent_CellContentClick);
             this.metroGridAdherent.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.metroGridAdherent_RowHeaderMouseDoubleClick);
             // 
+            // prenom_adh
+            // 
+            this.prenom_adh.HeaderText = "Prenom";
+            this.prenom_adh.Name = "prenom_adh";
+            this.prenom_adh.ReadOnly = true;
+            // 
+            // nom_adh
+            // 
+            this.nom_adh.HeaderText = "Nom";
+            this.nom_adh.Name = "nom_adh";
+            this.nom_adh.ReadOnly = true;
+            // 
+            // club_adh
+            // 
+            this.club_adh.HeaderText = "Club";
+            this.club_adh.Name = "club_adh";
+            this.club_adh.ReadOnly = true;
+            // 
+            // Adresse_adh
+            // 
+            this.Adresse_adh.HeaderText = "Adresse";
+            this.Adresse_adh.Name = "Adresse_adh";
+            this.Adresse_adh.ReadOnly = true;
+            // 
+            // adh_date
+            // 
+            this.adh_date.HeaderText = "Date";
+            this.adh_date.Name = "adh_date";
+            this.adh_date.ReadOnly = true;
+            // 
+            // cotisation_adh
+            // 
+            this.cotisation_adh.HeaderText = "Cotisation";
+            this.cotisation_adh.Name = "cotisation_adh";
+            this.cotisation_adh.ReadOnly = true;
+            // 
+            // numeros_adh
+            // 
+            this.numeros_adh.HeaderText = "Numéros";
+            this.numeros_adh.Name = "numeros_adh";
+            this.numeros_adh.ReadOnly = true;
+            // 
             // ListeAdherent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,5 +165,12 @@
 
         #endregion
         private MetroFramework.Controls.MetroGrid metroGridAdherent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenom_adh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nom_adh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn club_adh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adresse_adh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adh_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cotisation_adh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeros_adh;
     }
 }

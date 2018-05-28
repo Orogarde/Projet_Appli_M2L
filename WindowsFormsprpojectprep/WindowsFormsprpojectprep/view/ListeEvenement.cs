@@ -27,16 +27,21 @@ namespace WindowsFormsprpojectprep
 
         private void ListeEvenement_Load(object sender, EventArgs e)
         {
-            foreach (var item in liste.listEvenement)
-            {
+           
 
                 metroGridEvent.AutoGenerateColumns = true;
                 metroGridEvent.AutoResizeColumns();
                 liste.listEvenement = connect.ReadEvenement();
-                metroGridEvent.DataSource = liste.GetEvenements();
+                foreach (Evenement events in liste.listEvenement)
+                {
+
+                    metroGridEvent.Rows.Add(events.titreEvenement, events.debutEvenement, events.finEvenement,events.club.titre);
 
 
-            }
+                }
+
+
+            
         }
 
         private void metroGridEvent_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

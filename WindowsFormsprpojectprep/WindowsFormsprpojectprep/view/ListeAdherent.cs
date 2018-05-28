@@ -30,17 +30,23 @@ namespace WindowsFormsprpojectprep
         private void formL_Load(object sender, EventArgs e)
         {
 
-            foreach (var item in adherent.Getadherent())
-            {
+            
 
                 metroGridAdherent.AutoGenerateColumns = true;
                 metroGridAdherent.AutoResizeColumns();
                 adherent.listM = connect.ReadadherentSansClub();
                 adherent.listM.AddRange(connect.Readadherent());
-                metroGridAdherent.DataSource = adherent.Getadherent();
+                foreach (adhérent adh in adherent.listM)
+                {
+                    try
+                    {   metroGridAdherent.Rows.Add(adh.prenom, adh.nom, adh.club.titre, adh.Adresse, adh.date, adh.cotisation, adh.numero);
+                    }
+                    catch
+                    { metroGridAdherent.Rows.Add(adh.prenom, adh.nom,"aucun club", adh.Adresse, adh.date, adh.cotisation, adh.numero); }
+                }
                 
 
-            }
+            
 
 
 

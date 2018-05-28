@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroGridEvent = new MetroFramework.Controls.MetroGrid();
+            this.event_titre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.event_debut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.event_fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.event_club = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridEvent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +57,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.metroGridEvent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGridEvent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.metroGridEvent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.event_titre,
+            this.event_debut,
+            this.event_fin,
+            this.event_club});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -64,9 +73,8 @@
             this.metroGridEvent.EnableHeadersVisualStyles = false;
             this.metroGridEvent.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGridEvent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGridEvent.Location = new System.Drawing.Point(44, 64);
+            this.metroGridEvent.Location = new System.Drawing.Point(104, 75);
             this.metroGridEvent.MaximumSize = new System.Drawing.Size(438, 254);
-            this.metroGridEvent.MinimumSize = new System.Drawing.Size(438, 254);
             this.metroGridEvent.Name = "metroGridEvent";
             this.metroGridEvent.ReadOnly = true;
             this.metroGridEvent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -80,13 +88,37 @@
             this.metroGridEvent.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGridEvent.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGridEvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGridEvent.Size = new System.Drawing.Size(438, 254);
+            this.metroGridEvent.Size = new System.Drawing.Size(329, 233);
             this.metroGridEvent.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroGridEvent.TabIndex = 2;
             this.metroGridEvent.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroGridEvent.UseCustomForeColor = true;
             this.metroGridEvent.UseStyleColors = true;
             this.metroGridEvent.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.metroGridEvent_RowHeaderMouseDoubleClick);
+            // 
+            // event_titre
+            // 
+            this.event_titre.HeaderText = "Titre";
+            this.event_titre.Name = "event_titre";
+            this.event_titre.ReadOnly = true;
+            // 
+            // event_debut
+            // 
+            this.event_debut.HeaderText = "Date de debut";
+            this.event_debut.Name = "event_debut";
+            this.event_debut.ReadOnly = true;
+            // 
+            // event_fin
+            // 
+            this.event_fin.HeaderText = "Date de fin";
+            this.event_fin.Name = "event_fin";
+            this.event_fin.ReadOnly = true;
+            // 
+            // event_club
+            // 
+            this.event_club.HeaderText = "Club";
+            this.event_club.Name = "event_club";
+            this.event_club.ReadOnly = true;
             // 
             // ListeEvenement
             // 
@@ -107,5 +139,9 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid metroGridEvent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn event_titre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn event_debut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn event_fin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn event_club;
     }
 }

@@ -19,16 +19,21 @@ namespace WindowsFormsprpojectprep
 
         private void ListeClub_Load(object sender, System.EventArgs e)
         {
-            foreach (var item in Liste.GetClubs ())
-            {
 
                 metroGridClubs.AutoGenerateColumns = true;
                 metroGridClubs.AutoResizeColumns();
                 Liste.listClubs = connect.ReadClub();
-                metroGridClubs.DataSource = Liste.GetClubs();
+                foreach(Club club in Liste.listClubs)
+                {
+
+                metroGridClubs.Rows.Add(club.titre, club.ville, club.url,club.mail, club.numero,club.codepostal ,club.Type.libelle);
+                    
+                   
+                }
 
 
-            }
+
+            
         }
 
         private void metroGridClubs_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

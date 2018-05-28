@@ -10,6 +10,7 @@ namespace WindowsFormsprpojectprep
     class DAOEvenement
     {
         private string connectionString;
+        public MySqlConnection connexion { get; set; }
 
         //Constructor
         public DAOEvenement()
@@ -29,15 +30,18 @@ namespace WindowsFormsprpojectprep
             string password = "";
             connectionString = "SERVER=" + server + ";" + "PORT=" + port + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            try
 
+            { this.connexion = new MySqlConnection(connectionString); }
+            catch { Console.WriteLine("erreur"); }
         }
 
 
 
         /// <summary>
-        /// La méthode Read retourne un fournisseur en fonction de l'id dans la table. 
+        /// La méthode ReadEvenement retourne une liste de tout les evenements dans la table. 
         /// </summary>
-        /// <param name="id">id du fournisseur recherché</param>
+        /// <param name="id"></param>
         /// <returns></returns>
         public List<Evenement> ReadEvenement()
         {
@@ -45,7 +49,7 @@ namespace WindowsFormsprpojectprep
 
             Evenement evenements ;
             Club club;
-            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            using (connexion)
             {
                 connexion.Open();
 
@@ -80,10 +84,14 @@ namespace WindowsFormsprpojectprep
             }
             return liste;
         }
+        /// <summary>
+        /// delete un evenement dans la table en fonction d'un evenement 
+        /// </summary>
+        /// <param name="evenement"></param>
        
         public void supprimerEvenement(Evenement evenement )
         {
-            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            using ( connexion )
             {
                 connexion.Open();
                 string requete = "DELETE FROM evenement WHERE id_evenement = @id";
@@ -92,10 +100,13 @@ namespace WindowsFormsprpojectprep
                 cmd.ExecuteNonQuery();
             }
         }
-      
+      /// <summary>
+      /// insert d'un evenement dans la table avec des données saisies
+      /// </summary>
+      /// <param name="evenement"></param>
         public void ajouterEvenement(Evenement evenement)
         {
-            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            using ( connexion )
             {
                 connexion.Open();
                 string requete = "INSERT INTO `evenement` (`id_evenement`, `Titre_evenement`, `debut_evenement`, `fin_evenement`, `id_club`) VALUES (NULL, @titre, @dateDebut,@dateFin, @idClub);";
@@ -108,9 +119,13 @@ namespace WindowsFormsprpojectprep
                 cmd.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// update d'un evenement dans la table en fonction des données saisies
+        /// </summary>
+        /// <param name="evenement"></param>
         public void ModifEvenement(Evenement evenement)
         {
-            using (MySqlConnection connexion = new MySqlConnection(connectionString))
+            using ( connexion )
             {
                 connexion.Open();
                 string requete ="UPDATE `evenement` SET `Titre_evenement` = @titre, `debut_evenement` = @dateDebut, `fin_evenement` = @dateFin WHERE `evenement`.`id_evenement` = @id ; ";

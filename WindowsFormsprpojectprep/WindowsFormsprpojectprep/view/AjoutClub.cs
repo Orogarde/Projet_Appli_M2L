@@ -53,19 +53,30 @@ namespace WindowsFormsprpojectprep
 
         private void metroButtonAjout_Click(object sender, EventArgs e)
         {
-            string titre = textBoxtitre.Text;
-            string url = textBoxUrl.Text;
-            string adresse = textBoxAdresse.Text;
-            string codePostal = maskedTextBoxCodePostal.Text;
-            string ville = TextBoxVille.Text;
-            string mail = textBoxMail.Text;
-            string tel = maskedTextBoxTel.Text;
-            int idtype = 1;
-            Club club = new Club(titre, url, ville, tel, codePostal, mail, idtype, adresse);
-            club.Type = listTypeclub.GetTypeClubliste(index);
-            DAOclub connect = new DAOclub();
-            connect.ajouterClub(club);
-
+            try
+            {
+                string titre = textBoxtitre.Text;
+                string url = textBoxUrl.Text;
+                string adresse = textBoxAdresse.Text;
+                string codePostal = maskedTextBoxCodePostal.Text;
+                string ville = TextBoxVille.Text;
+                string mail = textBoxMail.Text;
+                string tel = maskedTextBoxTel.Text;
+                int idtype = 1;
+                if (titre.Length != 0 && url.Length != 0 && adresse.Length != 0 && codePostal.Length != 0 && ville.Length != 0 && mail.Length != 0 && tel.Length != 0)
+                {
+                    Club club = new Club(titre, url, ville, tel, codePostal, mail, idtype, adresse);
+                    club.Type = listTypeclub.GetTypeClubliste(index);
+                    DAOclub connect = new DAOclub();
+                    connect.ajouterClub(club);
+                    MetroFramework.MetroMessageBox.Show(this, "le Club a bien été ajouté", "Félicitations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else MetroFramework.MetroMessageBox.Show(this, "Vous devez remplir tous les champs", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                MetroFramework.MetroMessageBox.Show(this, "problème lors de la saisie !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             textBoxtitre.Text = string.Empty;
             textBoxUrl.Text = string.Empty;

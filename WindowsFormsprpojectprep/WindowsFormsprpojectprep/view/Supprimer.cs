@@ -59,8 +59,9 @@ namespace WindowsFormsprpojectprep
 
         private void listBoxSupprimer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            index = listBoxSupprimer.SelectedIndex;
-            
+           
+                index = listBoxSupprimer.SelectedIndex;
+
             
            // adhérentselectionner = listBoxSupprimer.SelectedIted;
             

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
+
 namespace WindowsFormsprpojectprep
 {
     public partial class AjoutAdherentAclub : MetroForm
@@ -45,15 +46,18 @@ namespace WindowsFormsprpojectprep
 
         private void listBoxAdherents_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
 
-            indexAdherent = listBoxAdherents.SelectedIndex;
+                indexAdherent = listBoxAdherents.SelectedIndex;
             
            
         }
 
         private void listBoxClubs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            indexClub = listBoxClubs.SelectedIndex;
+           
+                indexClub = listBoxClubs.SelectedIndex;
+            
             
         }
 
