@@ -44,6 +44,7 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.maskedTextBoxCotisation = new System.Windows.Forms.MaskedTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // textBoxN
@@ -189,12 +190,27 @@
             this.metroLabel7.TabIndex = 30;
             this.metroLabel7.Text = "Date sélectionner :";
             // 
+            // metroButtonRetour
+            // 
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(398, 18);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 31;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
+            // 
             // ModifierAdherent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(500, 500);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.maskedTextBoxCotisation);
             this.Controls.Add(this.metroLabel6);
@@ -240,5 +256,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCotisation;
         private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }

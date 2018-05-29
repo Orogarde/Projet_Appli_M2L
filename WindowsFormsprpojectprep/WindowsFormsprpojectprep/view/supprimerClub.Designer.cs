@@ -30,6 +30,7 @@
         {
             this.listBoxSup = new System.Windows.Forms.ListBox();
             this.metroButtonSup = new MetroFramework.Controls.MetroButton();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // listBoxSup
@@ -57,11 +58,26 @@
             this.metroButtonSup.UseStyleColors = true;
             this.metroButtonSup.Click += new System.EventHandler(this.metroButtonSup_Click);
             // 
+            // metroButtonRetour
+            // 
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(388, 265);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 7;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
+            // 
             // supprimerClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 323);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.metroButtonSup);
             this.Controls.Add(this.listBoxSup);
             this.MaximumSize = new System.Drawing.Size(507, 323);
@@ -79,5 +95,6 @@
 
         private System.Windows.Forms.ListBox listBoxSup;
         private MetroFramework.Controls.MetroButton metroButtonSup;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }

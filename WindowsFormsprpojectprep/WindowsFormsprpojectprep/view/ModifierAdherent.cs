@@ -87,5 +87,10 @@ namespace WindowsFormsprpojectprep
 
               monthCalendar1.SelectionStart = adherentModif.date;
         }
+
+        private void metroButtonRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

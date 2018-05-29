@@ -45,6 +45,7 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.maskedTextBoxTel = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCodePostal = new System.Windows.Forms.MaskedTextBox();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // textBoxtitre
@@ -195,11 +196,26 @@
             this.maskedTextBoxCodePostal.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBoxCodePostal.TabIndex = 29;
             // 
+            // metroButtonRetour
+            // 
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(369, 264);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 30;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
+            // 
             // AjoutClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 318);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.maskedTextBoxCodePostal);
             this.Controls.Add(this.maskedTextBoxTel);
             this.Controls.Add(this.metroLabel8);
@@ -248,5 +264,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTel;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCodePostal;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }

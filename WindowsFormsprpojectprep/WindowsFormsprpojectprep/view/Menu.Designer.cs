@@ -39,11 +39,12 @@
             this.supprimerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnAdhérentsÀUnClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.evenementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.listerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.statistiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,6 +155,14 @@
             this.toolStripMenuItem1.Text = "désinscrire un adhérent à un club";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // statistiquesToolStripMenuItem
+            // 
+            this.statistiquesToolStripMenuItem.ForeColor = System.Drawing.Color.Teal;
+            this.statistiquesToolStripMenuItem.Name = "statistiquesToolStripMenuItem";
+            this.statistiquesToolStripMenuItem.Size = new System.Drawing.Size(405, 34);
+            this.statistiquesToolStripMenuItem.Text = "Statistiques";
+            this.statistiquesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesToolStripMenuItem_Click);
+            // 
             // evenementsToolStripMenuItem
             // 
             this.evenementsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -192,13 +201,19 @@
             this.supprimerToolStripMenuItem2.Text = "Supprimer";
             this.supprimerToolStripMenuItem2.Click += new System.EventHandler(this.supprimerToolStripMenuItem2_Click);
             // 
-            // statistiquesToolStripMenuItem
+            // metroButtonRetour
             // 
-            this.statistiquesToolStripMenuItem.ForeColor = System.Drawing.Color.Teal;
-            this.statistiquesToolStripMenuItem.Name = "statistiquesToolStripMenuItem";
-            this.statistiquesToolStripMenuItem.Size = new System.Drawing.Size(405, 34);
-            this.statistiquesToolStripMenuItem.Text = "Statistiques";
-            this.statistiquesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesToolStripMenuItem_Click);
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(312, 22);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 7;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
             // 
             // MaisonDesLigues
             // 
@@ -208,6 +223,7 @@
             this.BackLocation = MetroFramework.Forms.BackLocation.BottomLeft;
             this.BackMaxSize = 80;
             this.ClientSize = new System.Drawing.Size(400, 400);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,6 +263,7 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterUnAdhérentsÀUnClubToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem statistiquesToolStripMenuItem;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }
 

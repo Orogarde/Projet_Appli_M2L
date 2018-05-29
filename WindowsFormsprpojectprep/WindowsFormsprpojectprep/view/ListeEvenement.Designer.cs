@@ -36,6 +36,7 @@
             this.event_debut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.event_fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.event_club = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridEvent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,11 +121,26 @@
             this.event_club.Name = "event_club";
             this.event_club.ReadOnly = true;
             // 
+            // metroButtonRetour
+            // 
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(401, 18);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 7;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
+            // 
             // ListeEvenement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 331);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.metroGridEvent);
             this.Name = "ListeEvenement";
             this.Style = MetroFramework.MetroColorStyle.Teal;
@@ -143,5 +159,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn event_debut;
         private System.Windows.Forms.DataGridViewTextBoxColumn event_fin;
         private System.Windows.Forms.DataGridViewTextBoxColumn event_club;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }

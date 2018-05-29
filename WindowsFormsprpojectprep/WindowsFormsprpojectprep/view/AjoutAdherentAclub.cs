@@ -78,5 +78,10 @@ namespace WindowsFormsprpojectprep
                 listBoxAdherents.Items.Add(item.nom + "  " + item.prenom);
             }
         }
+
+        private void metroButtonRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

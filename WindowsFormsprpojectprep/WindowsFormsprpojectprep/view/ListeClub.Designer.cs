@@ -39,6 +39,7 @@
             this.club_numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.club_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.club_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridClubs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,11 +144,26 @@
             this.club_type.Name = "club_type";
             this.club_type.ReadOnly = true;
             // 
+            // metroButtonRetour
+            // 
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(438, 22);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 7;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
+            // 
             // ListeClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 332);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.metroGridClubs);
             this.MaximumSize = new System.Drawing.Size(599, 332);
             this.MinimumSize = new System.Drawing.Size(599, 332);
@@ -170,5 +186,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn club_numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn club_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn club_type;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }

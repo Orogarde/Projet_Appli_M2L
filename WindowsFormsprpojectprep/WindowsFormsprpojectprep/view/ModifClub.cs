@@ -78,5 +78,10 @@ namespace WindowsFormsprpojectprep
             textBoxMail.Text = string.Empty;
             maskedTextBoxCodePostal.Text = string.Empty;
         }
+
+        private void metroButtonRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

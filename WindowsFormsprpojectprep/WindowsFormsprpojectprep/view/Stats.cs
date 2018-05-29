@@ -44,6 +44,11 @@ namespace WindowsFormsprpojectprep
             }
 
         }
+
+        private void metroButtonRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

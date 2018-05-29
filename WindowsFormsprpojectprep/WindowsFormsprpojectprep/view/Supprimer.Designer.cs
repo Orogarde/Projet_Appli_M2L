@@ -30,6 +30,7 @@
         {
             this.metroButtonSupprimer = new MetroFramework.Controls.MetroButton();
             this.listBoxSupprimer = new System.Windows.Forms.ListBox();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButtonSupprimer
@@ -61,11 +62,26 @@
             this.listBoxSupprimer.TabIndex = 2;
             this.listBoxSupprimer.SelectedIndexChanged += new System.EventHandler(this.listBoxSupprimer_SelectedIndexChanged);
             // 
+            // metroButtonRetour
+            // 
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(412, 279);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 7;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
+            // 
             // Supprimer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 350);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.metroButtonSupprimer);
             this.Controls.Add(this.listBoxSupprimer);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -84,5 +100,6 @@
         #endregion
         private MetroFramework.Controls.MetroButton metroButtonSupprimer;
         private System.Windows.Forms.ListBox listBoxSupprimer;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }

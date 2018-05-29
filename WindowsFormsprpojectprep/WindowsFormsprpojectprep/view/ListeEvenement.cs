@@ -51,5 +51,10 @@ namespace WindowsFormsprpojectprep
             ModifEvenement modif = new ModifEvenement(liste, eventModif);
             modif.ShowDialog();
         }
+
+        private void metroButtonRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

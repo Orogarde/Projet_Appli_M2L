@@ -39,6 +39,7 @@
             this.adh_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cotisation_adh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeros_adh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridAdherent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,12 +145,27 @@
             this.numeros_adh.Name = "numeros_adh";
             this.numeros_adh.ReadOnly = true;
             // 
+            // metroButtonRetour
+            // 
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(371, 13);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 7;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
+            // 
             // ListeAdherent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(484, 353);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.metroGridAdherent);
             this.MaximumSize = new System.Drawing.Size(500, 400);
             this.MinimumSize = new System.Drawing.Size(400, 300);
@@ -172,5 +188,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adh_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn cotisation_adh;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeros_adh;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }

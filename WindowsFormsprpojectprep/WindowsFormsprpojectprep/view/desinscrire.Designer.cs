@@ -30,6 +30,7 @@
         {
             this.listBoxadherent = new System.Windows.Forms.ListBox();
             this.metroButtonDesinscrire = new MetroFramework.Controls.MetroButton();
+            this.metroButtonRetour = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // listBoxadherent
@@ -59,11 +60,26 @@
             this.metroButtonDesinscrire.UseStyleColors = true;
             this.metroButtonDesinscrire.Click += new System.EventHandler(this.metroButtonDesinscrire_Click);
             // 
+            // metroButtonRetour
+            // 
+            this.metroButtonRetour.Highlight = true;
+            this.metroButtonRetour.Location = new System.Drawing.Point(360, 268);
+            this.metroButtonRetour.Name = "metroButtonRetour";
+            this.metroButtonRetour.Size = new System.Drawing.Size(79, 35);
+            this.metroButtonRetour.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroButtonRetour.TabIndex = 7;
+            this.metroButtonRetour.Text = "retour";
+            this.metroButtonRetour.UseCustomBackColor = true;
+            this.metroButtonRetour.UseSelectable = true;
+            this.metroButtonRetour.UseStyleColors = true;
+            this.metroButtonRetour.Click += new System.EventHandler(this.metroButtonRetour_Click);
+            // 
             // desinscrire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 319);
+            this.Controls.Add(this.metroButtonRetour);
             this.Controls.Add(this.metroButtonDesinscrire);
             this.Controls.Add(this.listBoxadherent);
             this.Name = "desinscrire";
@@ -79,5 +95,6 @@
 
         private System.Windows.Forms.ListBox listBoxadherent;
         private MetroFramework.Controls.MetroButton metroButtonDesinscrire;
+        private MetroFramework.Controls.MetroButton metroButtonRetour;
     }
 }
